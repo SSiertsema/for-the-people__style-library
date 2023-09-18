@@ -1,0 +1,52 @@
+$breakpoints: (
+  phone: (
+    from: 0px,
+    to: 599px
+  ),
+  tablet: (
+    from: 600px,
+    to: 1440px
+  ),
+  laptop: (
+    from: 1440px,
+    to: 1919px
+  ),
+  desktop: (
+    from: 1920px,
+    to: 10000px
+  )
+);
+
+@mixin breakpoint-from($bp) {
+  $from: map-get(map-get($breakpoints, $bp), from);
+
+  @media (min-width: $from) {
+    @content;
+  }
+}
+
+@mixin breakpoint-to($bp) {
+  $to: map-get(map-get($breakpoints, $bp), to);
+
+  @media (max-width: $to) {
+    @content;
+  }
+}
+
+@mixin breakpoint-on($bp) {
+  $from: map-get(map-get($breakpoints, $bp), from);
+  $to: map-get(map-get($breakpoints, $bp), to);
+
+  @media (max-width: $to) and (min-width: $from) {
+    @content;
+  }
+}
+
+@mixin breakpoint-from-to($bp-from, $bp-to) {
+  $from: map-get(map-get($breakpoints, $bp-from), from);
+  $to: map-get(map-get($breakpoints, $bp-to), to);
+
+  @media (max-width: $to) and (min-width: $from) {
+    @content;
+  }
+}

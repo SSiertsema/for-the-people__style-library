@@ -1,0 +1,79 @@
+@import "../../variables/colors/colors.scss";
+@import "../mixins/breakpoint.scss";
+
+@mixin heading($name) {
+  font-weight: 500;
+  line-height: 1.25;
+  color: $color-blue-500;
+  @if ($name == "s") {
+    font-size: 20px;
+  } @else if ($name == "m") {
+    font-size: 24px;
+  } @else if ($name == "l") {
+    font-size: 32px;
+  } @else if ($name == "xl") {
+    font-size: 40px;
+  } @else if ($name == "xxl") {
+    font-size: 48px;
+  } @else if ($name == "xxxl") {
+    font-size: 64px;
+    line-height: 1.1;
+  }
+}
+
+@mixin text($name, $isStrong: false) {
+  line-height: 1.5;
+
+  @if ($isStrong) {
+    font-weight: 600;
+  }
+
+  @if ($name == "s") {
+    font-size: 16px;
+  } @else if ($name == "m") {
+    font-size: 20px;
+  } @else if ($name == "l") {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
+@mixin static-typography($category: "heading", $type: "l", $isStrong: false) {
+  font-family: Karbon;
+  @if ($category == "heading") {
+    @include heading($type);
+  } @else {
+    @include text($type, $isStrong);
+  }
+}
+
+@mixin typography($category: "heading", $type, $isStrong: false) {
+  @if ($category == "heading") {
+    @if ($type == "xxxl") {
+      @include static-typography("heading", "xxl");
+
+      @include breakpoint-from(laptop) {
+        @include static-typography($category, $type);
+      }
+    } @else if ($type == "xxl") {
+      @include static-typography("heading", "xl");
+      @include breakpoint-from(laptop) {
+        @include static-typography($category, $type);
+      }
+    } @else if ($type == "header-xl") {
+      @include static-typography("heading", "l");
+      @include breakpoint-from(laptop) {
+        @include static-typography($category, $type);
+      }
+    } @else if ($type == "header-l") {
+      @include static-typography("heading", "m");
+      @include breakpoint-from(laptop) {
+        @include static-typography($category, $type);
+      }
+    } @else {
+      @include static-typography($category, $type, $isStrong);
+    }
+  } @else if ($category == "text") {
+    @include static-typography($category, $type, $isStrong);
+  }
+}

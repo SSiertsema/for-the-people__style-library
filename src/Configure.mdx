@@ -1,0 +1,88 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="PZH Style Library" />
+
+# PZH HTML Componenten bibliotheek
+
+## Wat is dit?
+
+Lorem
+
+## Waarom bestaat dit?
+
+Lorem
+
+## Input voor deze bibliotheek
+
+De input voor deze bibliotheek is het [Design System](https://www.figma.com/file/11ZuN25dSOqx3w1ie9Avbz/Design-System---Provincie-Zuid-Holland?type=design&node-id=0-1&mode=design&t=QcNAIJsbMhtMMUQQ-0). Dit is een systeem waar het design team design elementen heeft genormaliseerd. Het systeem is gemaakt in [Figma](https://help.figma.com/hc/en-us/articles/14563969806359-What-is-Figma-#:~:text=Figma's%20mission%20is%20to%20make,other%20digital%20products%20and%20experiences.). Net als deze library is het een incrementeel product. Een product die altijd zal evolueren. Dit doen we in projectvorm. Hier staat de [backlog](https://pzh-nl.visualstudio.com/Design%20System%20Architectuur/_backlogs/backlog/Design%20System%20Architecture%20Team/Features) centraal.
+
+## Output
+
+#### Toegankelijke omgeving waar we:
+
+- Inzichtelijk maken welke componenten we hebben
+- Communiceren waarom een component bestaat (Rationale)
+- Communiceren wanneer het component gebruikt dient te worden (Richtlijnen)
+- Communiceren hoe de library gebruikt kan worden (Techniek)
+- Communiceren hoe een component geimplementeerd kan worden (Techniek)
+
+#### CSS utility classes
+
+Deze [Utility classes]() wordt beschikbaar gesteld op het CDN (Content delivery network) van Provincie Zuid-Holland.
+
+#### SCSS variabelen en Mixins
+
+We hebben een [NPM omgeving](https://www.npmjs.com/package/@pzh-temporary/style-library) waar we SCSS variabelen opslaan. Deze kunnen vanuit andere applicaties gebruikt worden als bronbestanden.
+
+## Nice! Hoe kan ik er gebruik van maken?
+
+Jazeker! Op verschillende manieren
+
+### Inladen CSS van CDN
+
+1. Inladen CSS in je website
+2. HTML kopieren uit component documentatie
+
+```html
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample PZH CSS library usage</title>
+    <link rel="stylesheet" href="URL NOG TOEVOEGEN"></link>
+</head>
+<body>
+    <button class="button-primary button-primary--size-medium">
+        <span>Button Primary</span>
+      </button>
+</body>
+</html>
+```
+
+**Let op:** Houd er rekening mee dat je applicatie beveiligd kan zijn met een CSP (Content security policy). In dat geval kan het mogelijk zijn dat de applicatie het CSS bestand niet in mag laden.
+
+### Gebruik maken van SCSS library
+
+We stellen SCSS variabelen beschikbaar via NPM package @pzh-temporary/html-componenten-library.
+
+1. Vanuit een npm applicatie command line:
+
+```JS
+npm i -D @pzh-temporary/style-library
+```
+
+2. In scss bestand:
+
+```SCSS
+@import '@pzh-temporary/style-library/variables/colors.scss';
+div {
+    background-color: $color-green-500;
+}
+```
+
+## Referenties
+
+- [Front-end Architectuur](https://pzh-nl.visualstudio.com/Design%20System%20Architectuur/_wiki/wikis/Design-system.wiki/1449/Design-System-Digital-Pattern-Architecture)
+- [Design System](https://www.figma.com/file/11ZuN25dSOqx3w1ie9Avbz/Design-System---Provincie-Zuid-Holland?type=design&node-id=0-1&mode=design&t=QcNAIJsbMhtMMUQQ-0)
+- [Repository]()
+- [Backlog]()

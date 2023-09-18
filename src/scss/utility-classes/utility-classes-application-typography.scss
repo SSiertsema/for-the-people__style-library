@@ -1,0 +1,17 @@
+@import "../fonts.scss";
+@import "../mixins/application-typography.scss";
+
+$typographic-forms: "header-s" "header-m" "header-l" "header-xl" "header-xxl"
+  "text-xs" "text-s" "text-m";
+
+@each $typographic-form in $typographic-forms {
+  .#{$typographic-form} {
+    @include responsive-typography($typographic-form);
+  }
+}
+
+@each $typographic-form in $typographic-forms {
+  .#{$typographic-form}-static {
+    @include typography($typographic-form);
+  }
+}

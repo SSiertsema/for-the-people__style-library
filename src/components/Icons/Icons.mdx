@@ -1,0 +1,35 @@
+import { Meta, Title, Story } from "@storybook/blocks";
+
+import * as Stories from "./Icons.stories";
+
+<Meta of={Stories} name="Rationales" />
+
+<Title />
+
+We maken gebruik van een subset de Font Awesome 6.4.0 Pro. We genereren zelf
+de icon-font. Deze wordt gedeployed op de [CDN](https://cdn-pzh.azureedge.net) van de provincie.
+
+<i class="iconography__code-caption">Invoegen in html head tag</i>
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn-pzh.azureedge.net/web/pzh-style-library/assets/icons/styles/icons-solid.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn-pzh.azureedge.net/web/pzh-style-library/assets/icons/styles/icons-light.css"
+/>
+```
+
+<i class="iconography__code-caption">Gebruik</i>
+
+```html
+// Format
+<i class="icon-[style]--[name]"></i>
+
+// Voorbeelden
+<i class="icon-solid--user"></i>
+<i class="icon-light--download"></i>
+```
+
+<Story of={Stories.Icons} />
