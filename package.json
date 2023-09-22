@@ -1,7 +1,7 @@
 {
-  "name": "style-library",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@pzh-temporary/style-library",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,6 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
-    "vue": "^3.3.4",
     "@storybook/addon-essentials": "^7.2.1",
     "@storybook/addon-interactions": "^7.2.1",
     "@storybook/addon-links": "^7.2.1",
@@ -20,10 +19,12 @@
     "@storybook/vue3": "^7.2.1",
     "@storybook/vue3-vite": "^7.2.1",
     "@vitejs/plugin-vue": "^4.2.3",
+    "basic-ftp": "^5.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.64.2",
     "storybook": "^7.2.1",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vue": "^3.3.4"
   }
 }
