@@ -166,6 +166,11 @@ export default {
   ],
   Groen: [
     {
+      name: "Groen 10",
+      variable: "$color-green-10",
+      hex: "#EDFAF0"
+    },
+    {
       name: "Groen 100",
       variable: "$color-green-100",
       hex: "#61b375",
