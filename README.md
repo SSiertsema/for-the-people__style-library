@@ -1,7 +1,47 @@
-# Vue 3 + Vite
+# PZH Style Library
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Deze laag van de is verantwoordelijk voor het loskoppelen van style/ambiance. De doelstelling is opstellen en onderhouden van style definities.
 
-## Recommended IDE Setup
+## Input
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- [Design system](https://www.figma.com/file/11ZuN25dSOqx3w1ie9Avbz/Design-System---Provincie-Zuid-Holland)
+
+## Output
+
+- Website [Website](https://n2dabaed4e91d4ca59f2a437.azurewebsites.net/) welke inzicht geeft in verschillende bouwblokken
+- SCSS variabelen, mixins en fucties gedeployed als Prive NPM Library te vinden op [documentatie](https://www.npmjs.com/package/@pzh-temporary/style-library)
+- ?? Typografie CSS bestand op CDN
+- ?? Fonts deployen op CDN
+- ?? Utility classes typografie, margins, paddings, grid, radius, levitation, colors, background-colors, animaties
+
+## Techniek
+
+### Technologieen
+
+- Storybook
+- Vue 3 als template engine
+- Custom node workflow tools
+
+### Benodigdheden
+
+- Node 18.12.1
+- NPM 8.19.2
+- NPM account op basis van je PZH emailadres. Dit account dient gerechtigd te zijn om private packages (@pzh-temporary) te gebruiken van PZH.
+
+### Installeren dependencies
+
+```bash
+npm install
+```
+
+### Ontwikkelen
+
+```bash
+npm run storybook
+```
+
+### Publiceren NPM
+
+1. Verhoog attribuut 'version' in bestand package.json
+1. Zorg dat je ingelogd bent bij NPM. Zo niet voer in command line commando 'npm login' uit
+1. Voer in command line commando 'npm run publish-to-npm' uit

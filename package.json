@@ -1,14 +1,14 @@
 {
   "name": "@pzh-temporary/style-library",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
     "storybook": "storybook dev -p 2222",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "generate-variables": "node workflow/generateColorVariables.cjs && node workflow/generateBoxShadows.cjs && node workflow/generateRadii.cjs && node workflow/generateSpacers.cjs",
+    "publish-to-npm": "npm run generate-variables && npm publish"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.2.1",
