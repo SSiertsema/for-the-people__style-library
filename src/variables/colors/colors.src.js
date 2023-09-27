@@ -1,6 +1,11 @@
 export default {
   Rood: [
     {
+      name: "Rood 10",
+      variable: "$color-red-10",
+      hex: "#FFEDF0",
+    },
+    {
       name: "Rood 100",
       variable: "$color-red-100",
       hex: "#eb7085",
@@ -21,7 +26,7 @@ export default {
     {
       name: "Yellow 10",
       variable: "$color-yellow-10",
-      hex: "#fff8d7",
+      hex: "#FFF9E3",
     },
     {
       name: "Yellow 100",
@@ -44,7 +49,7 @@ export default {
     {
       name: "Blauw 10",
       variable: "$color-blue-10",
-      hex: "#d9ecff",
+      hex: "#F2F7FC",
     },
     {
       name: "Blauw 100",
@@ -168,7 +173,7 @@ export default {
     {
       name: "Groen 10",
       variable: "$color-green-10",
-      hex: "#EDFAF0"
+      hex: "#EDFAF0",
     },
     {
       name: "Groen 100",
