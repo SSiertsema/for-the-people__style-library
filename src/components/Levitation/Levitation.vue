@@ -16,7 +16,7 @@
 </template>
 
 <style lang="scss">
-@import "../../variables/radii/radii.scss";
+@import "../../scss/variables/radii.scss";
 @import "../../scss/mixins/levitation.scss";
 
 .levitation {

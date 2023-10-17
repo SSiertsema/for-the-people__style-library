@@ -71,5 +71,5 @@
 </style>
 
 <script setup>
-import colorsConfig from "../../variables/colors/colors.src";
+import colorsConfig from "../../variables/colors.src";
 </script>

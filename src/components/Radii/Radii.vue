@@ -52,5 +52,5 @@
 </style>
 
 <script setup>
-import radii from "../../variables/radii/radii.src";
+import radii from "../../variables/radii.src";
 </script>

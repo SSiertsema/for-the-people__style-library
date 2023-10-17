@@ -11,7 +11,6 @@ Deze laag van de is verantwoordelijk voor het loskoppelen van style/ambiance. De
 - Website [Website](https://n2dabaed4e91d4ca59f2a437.azurewebsites.net/) welke inzicht geeft in verschillende bouwblokken
 - SCSS variabelen, mixins en fucties gedeployed als Prive NPM Library te vinden op [documentatie](https://www.npmjs.com/package/@pzh-temporary/style-library)
 - ?? Typografie CSS bestand op CDN
-- ?? Fonts deployen op CDN
 - ?? Utility classes typografie, margins, paddings, grid, radius, levitation, colors, background-colors, animaties
 
 ## Techniek
@@ -21,6 +20,7 @@ Deze laag van de is verantwoordelijk voor het loskoppelen van style/ambiance. De
 - Storybook
 - Vue 3 als template engine
 - Custom node workflow tools
+  -- Omzetten van variable source files naar bijvoorbeeld .scss bestanden
 
 ### Benodigdheden
 
@@ -36,12 +36,22 @@ npm install
 
 ### Ontwikkelen
 
+Dit start een storybook instantie in development mode
+
 ```bash
-npm run storybook
+npm run dev
+```
+
+### Build
+
+Dit bouwt een storybook instantie zodat dit gepubliceerd kan worden.
+
+```bash
+npm run build
 ```
 
 ### Publiceren NPM
 
-1. Verhoog attribuut 'version' in bestand package.json
+1. Verhoog attribuut 'version' in bestand package.json volgens [SemVer](https://semver.org/)
 1. Zorg dat je ingelogd bent bij NPM. Zo niet voer in command line commando 'npm login' uit
 1. Voer in command line commando 'npm run publish-to-npm' uit

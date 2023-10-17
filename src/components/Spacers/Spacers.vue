@@ -44,5 +44,5 @@
 </style>
 
 <script setup>
-import spacers from "../../variables/spacers/spacers.src";
+import spacers from "../../variables/spacers.src";
 </script>

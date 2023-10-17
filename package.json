@@ -1,16 +1,16 @@
 {
   "name": "@pzh-temporary/style-library",
   "private": false,
-  "version": "1.1.2",
+  "version": "1.1.7",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "storybook": "storybook dev -p 2222",
-    "build-storybook": "storybook build",
-    "generate-variables": "node workflow/generateColorVariables.cjs && node workflow/generateBoxShadows.cjs && node workflow/generateRadii.cjs && node workflow/generateSpacers.cjs",
-    "publish-to-npm": "npm run generate-variables && npm publish"
+    "generate-variables": "node workflow/VariableGenereration/generateColors.cjs && node workflow/VariableGenereration/generateBoxShadows.cjs && node workflow/VariableGenereration/generateRadii.cjs && node workflow/VariableGenereration/generateSpacers.cjs",
+    "dev": "npm run generate-variables && storybook dev -p 2222",
+    "build": "npm run generate-variables && storybook build",
+    "publish-all": "npm run generate-variables && npm publish && node ./workflow/DeploymentCDN/preprocessUtilityClasses.cjs && node ./workflow/DeploymentCDN/deployUtilityClassesToCDN.cjs"
   },
   "devDependencies": {
+    "@azure/storage-blob": "^12.16.0",
     "@storybook/addon-essentials": "^7.2.1",
     "@storybook/addon-interactions": "^7.2.1",
     "@storybook/addon-links": "^7.2.1",
@@ -20,10 +20,13 @@
     "@storybook/vue3-vite": "^7.2.1",
     "@vitejs/plugin-vue": "^4.2.3",
     "basic-ftp": "^5.0.3",
+    "consola": "^3.2.3",
+    "glob": "^10.3.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.64.2",
     "storybook": "^7.2.1",
+    "uglifycss": "^0.0.29",
     "vite": "^4.4.5",
     "vue": "^3.3.4"
   }
