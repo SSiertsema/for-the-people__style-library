@@ -1,0 +1,24 @@
+@import "./breakpoint.scss";
+@import "../variables/spacers.scss";
+
+@mixin grid() {
+  display: grid;
+  grid-column: 1;
+  gap: $space-6;
+  margin-left: $space-6;
+  margin-right: $space-6;
+
+  @include breakpoint-from(tablet) {
+    margin: 0 auto;
+    grid-column: 4;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: $space-12;
+    max-width: 768px;
+  }
+
+  @include breakpoint-from(laptop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column: 6;
+    max-width: 1248px;
+  }
+}

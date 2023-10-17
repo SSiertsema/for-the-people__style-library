@@ -10,8 +10,8 @@ Deze laag van de is verantwoordelijk voor het loskoppelen van style/ambiance. De
 
 - Website [Website](https://n2dabaed4e91d4ca59f2a437.azurewebsites.net/) welke inzicht geeft in verschillende bouwblokken
 - SCSS variabelen, mixins en fucties gedeployed als Prive NPM Library te vinden op [documentatie](https://www.npmjs.com/package/@pzh-temporary/style-library)
-- ?? Typografie CSS bestand op CDN
-- ?? Utility classes typografie, margins, paddings, grid, radius, levitation, colors, background-colors, animaties
+- Utility classes typografie, margins, paddings
+- ?? Utility classes grid
 
 ## Techniek
 
@@ -44,7 +44,7 @@ npm run dev
 
 ### Build
 
-Dit bouwt een storybook instantie zodat dit gepubliceerd kan worden.
+Dit bouwt een storybook instantie zodat deze gepubliceerd kan worden.
 
 ```bash
 npm run build

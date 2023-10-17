@@ -4,7 +4,7 @@
   "version": "1.1.7",
   "type": "module",
   "scripts": {
-    "generate-variables": "node workflow/VariableGenereration/generateColors.cjs && node workflow/VariableGenereration/generateBoxShadows.cjs && node workflow/VariableGenereration/generateRadii.cjs && node workflow/VariableGenereration/generateSpacers.cjs",
+    "generate-variables": "node workflow/VariableGenereration/generateColors.cjs && node workflow/VariableGenereration/generateBoxShadows.cjs && node workflow/VariableGenereration/generateRadii.cjs && node workflow/VariableGenereration/generateSpacers.cjs && node workflow/VariableGenereration/generateSpacingUtilityClasses.cjs",
     "dev": "npm run generate-variables && storybook dev -p 2222",
     "build": "npm run generate-variables && storybook build",
     "publish-all": "npm run generate-variables && npm publish && node ./workflow/DeploymentCDN/preprocessUtilityClasses.cjs && node ./workflow/DeploymentCDN/deployUtilityClassesToCDN.cjs"
