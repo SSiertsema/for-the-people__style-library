@@ -1,20 +1,25 @@
 $breakpoints: (
   phone: (
     from: 0px,
-    to: 599px
+    to: 599px,
   ),
   tablet: (
     from: 600px,
-    to: 1440px
+    to: 1440px,
   ),
   laptop: (
     from: 1440px,
-    to: 1919px
+    to: 1919px,
   ),
   desktop: (
     from: 1920px,
-    to: 10000px
+    to: 2559px,
   )
+  wide-screen:
+  (
+    from: 2560px,
+    to: 10000px,
+  ),
 );
 
 @mixin breakpoint-from($bp) {
