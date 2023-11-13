@@ -28,7 +28,9 @@
     font-weight: 600;
   }
 
-  @if ($name == "s") {
+  @if ($name == "xs") {
+    font-size: 14px;
+  } @else if ($name == "s") {
     font-size: 16px;
   } @else if ($name == "m") {
     font-size: 20px;
