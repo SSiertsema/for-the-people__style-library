@@ -30,9 +30,10 @@ $breakpoints: (
 }
 
 @mixin breakpoint-to($bp) {
-  $to: map-get(map-get($breakpoints, $bp), to);
+  $from: map-get(map-get($breakpoints, $bp), from);
+  $max-width: $from - 1;
 
-  @media (max-width: $to) {
+  @media (max-width: $max-width) {
     @content;
   }
 }
