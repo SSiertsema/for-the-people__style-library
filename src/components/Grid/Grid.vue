@@ -1,13 +1,11 @@
 <template>
-  <div class="container">
-    <div class="grid">
-      <div>Content 1</div>
-      <div>Content 2</div>
-      <div>Content 3</div>
-      <div>Content 4</div>
-      <div>Content 5</div>
-      <div>Content 6</div>
-    </div>
+  <div class="grid">
+    <div>Content 1</div>
+    <div>Content 2</div>
+    <div>Content 3</div>
+    <div>Content 4</div>
+    <div>Content 5</div>
+    <div>Content 6</div>
   </div>
 </template>
 
@@ -15,10 +13,6 @@
 @import "../../scss/variables/spacers.scss";
 @import "../../scss/fonts.scss";
 @import "../../scss/mixins/grid.scss";
-
-.container {
-  background-color: #d5d5d5;
-}
 
 .grid {
   @include grid();

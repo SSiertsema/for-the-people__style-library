@@ -1,0 +1,16 @@
+@import "./breakpoint.scss";
+@import "../variables/spacers.scss";
+
+@mixin container() {
+  margin-left: $space-6;
+  margin-right: $space-6;
+
+  @include breakpoint-from(tablet) {
+    margin: 0 auto;
+    max-width: 768px;
+  }
+
+  @include breakpoint-from(laptop) {
+    max-width: 1248px;
+  }
+}
