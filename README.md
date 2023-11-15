@@ -50,8 +50,10 @@ Dit bouwt een storybook instantie zodat deze gepubliceerd kan worden.
 npm run build
 ```
 
-### Publiceren NPM
+### Publiceren
+
+Publiceert nieuwe versie naar NPM en publiceert utility classes naar het CDN
 
 1. Verhoog attribuut 'version' in bestand package.json volgens [SemVer](https://semver.org/)
 1. Zorg dat je ingelogd bent bij NPM. Zo niet voer in command line commando 'npm login' uit
-1. Voer in command line commando 'npm run publish-to-npm' uit
+1. Voer in command line commando 'npm run publish-all' uit
