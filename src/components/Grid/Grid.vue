@@ -1,26 +1,98 @@
 <template>
-  <div class="grid">
-    <div>Content 1</div>
-    <div>Content 2</div>
-    <div>Content 3</div>
-    <div>Content 4</div>
-    <div>Content 5</div>
-    <div>Content 6</div>
+  <div class="grid-collection">
+    <div class="container">
+      <div class="grid grid--sample-12-items">
+        <div v-for="index in 12">{{ index }}</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="grid grid--sample-6-items">
+        <div v-for="index in 6">{{ index }}</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="grid grid--sample-3-items">
+        <div v-for="index in 3">{{ index }}</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid grid--sample-2-items">
+        <div v-for="index in 2">{{ index }}</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="grid grid--sample-1-item">
+        <div v-for="index in 1">{{ index }}</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
 @import "../../scss/variables/spacers.scss";
 @import "../../scss/fonts.scss";
+@import "../../scss/mixins/container.scss";
 @import "../../scss/mixins/grid.scss";
 
+.grid-collection {
+  display: flex;
+  flex-direction: column;
+  gap: $space-20;
+}
+
+.container {
+  @include container;
+  background-color: #d5d5d5;
+}
+
 .grid {
-  @include grid();
+  @include grid;
   background-color: #750047;
+  overflow: hidden;
 
   > * {
     background-color: #d76aac;
-    padding: $space-8;
+    text-align: center;
+    padding: $space-3 $space-1;
+  }
+
+  &--sample-6-items {
+    grid-column: span 12;
+    > * {
+      @include breakpoint-from(tablet) {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  &--sample-3-items {
+    grid-column: span 12;
+    > * {
+      @include breakpoint-from(tablet) {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  &--sample-2-items {
+    > * {
+      grid-column: span 12;
+      @include breakpoint-from(tablet) {
+        grid-column: span 2;
+      }
+      @include breakpoint-from(laptop) {
+        grid-column: span 3;
+      }
+    }
+  }
+
+  &--sample-1-item {
+    > * {
+      grid-column: span 12;
+    }
   }
 }
 </style>

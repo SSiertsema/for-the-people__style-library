@@ -2,15 +2,30 @@
 @import "../variables/spacers.scss";
 
 @mixin container() {
-  margin-left: $space-6;
-  margin-right: $space-6;
+  padding-left: $space-4;
+  padding-right: $space-4;
 
   @include breakpoint-from(tablet) {
-    margin: 0 auto;
-    max-width: 768px;
+    padding: 0 $space-20;
   }
 
   @include breakpoint-from(laptop) {
-    max-width: 1248px;
+    padding: 0 $space-24;
+  }
+}
+
+@mixin container-with-dna() {
+  $extra-space: $space-12;
+  padding-left: $space-5;
+  padding-right: $space-5 + $extra-space;
+
+  @include breakpoint-from(tablet) {
+    padding-left: $space-20;
+    padding-right: $space-20 + $extra-space;
+  }
+
+  @include breakpoint-from(laptop) {
+    padding-left: $space-24;
+    padding-right: $space-24 + $extra-space;
   }
 }
