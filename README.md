@@ -57,3 +57,15 @@ Publiceert nieuwe versie naar NPM en publiceert utility classes naar het CDN
 1. Verhoog attribuut 'version' in bestand package.json volgens [SemVer](https://semver.org/)
 1. Zorg dat je ingelogd bent bij NPM. Zo niet voer in command line commando 'npm login' uit
 1. Voer in command line commando 'npm run publish-all' uit
+
+#### Fonts to CDN
+
+Need to Migrate from pzh-style-library
+
+#### Icons to CDN
+
+Need to Migrate from pzh-style-library
+
+#### Images to CDN
+
+Need to Migrate from pzh-style-library
