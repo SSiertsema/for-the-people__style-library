@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "{{fontname}}";
+  src: url("https://cdn-pzh.azureedge.net/web/pzh-style-library/assets/icons/fonts/{{fontname}}.woff2?t={{timestamp}}") format("woff2"),
+  url("https://cdn-pzh.azureedge.net/web/pzh-style-library/assets/icons/fonts/{{fontname}}.woff?t={{timestamp}}") format("woff");
+}
+
+[class^="{{prefix}}-"], [class*=" {{prefix}}-"] {
+  font-family: '{{fontname}}' !important;
+  font-size: {{fontSize}};
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+{{cssString}}

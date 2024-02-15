@@ -64,7 +64,11 @@ Need to Migrate from pzh-style-library
 
 #### Icons to CDN
 
-Need to Migrate from pzh-style-library
+1. Log-in op Fontawesome (Vraag Tim Terra naar credentials)
+1. Update .svg bestanden in folder src/assetc/icons
+1. ...
+1. ...
+   Need to Migrate from pzh-style-library
 
 #### Images to CDN
 
