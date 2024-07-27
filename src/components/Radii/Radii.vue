@@ -18,12 +18,14 @@
 <style lang="scss">
 @import "../../scss/mixins/container.scss";
 
+body {
+  padding: 24px 0 !important;
+}
 .radii {
   @include container;
   display: flex;
   gap: 24px;
   list-style: none;
-  padding: 0;
   margin: 0;
 }
 

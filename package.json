@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@azure/storage-blob": "^12.16.0",
+    "@storybook/addon-designs": "^8.0.3",
     "@storybook/addon-essentials": "^8.2.6",
     "@storybook/addon-interactions": "^8.2.6",
     "@storybook/addon-links": "^8.2.6",

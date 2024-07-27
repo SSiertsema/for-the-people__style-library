@@ -1,4 +1,104 @@
-import{c as s,F as o,r as i,u as v,o as r,a as c,j as u,t as m}from"./vue.esm-bundler-c6369bcc.js";const _=[{name:"Space 1",variable:"$space-1",value:"4px"},{name:"Space 2",variable:"$space-2",value:"8px"},{name:"Space 3",variable:"$space-3",value:"12px"},{name:"Space 4",variable:"$space-4",value:"16px"},{name:"Space 5",variable:"$space-5",value:"20px"},{name:"Space 6",variable:"$space-6",value:"24px"},{name:"Space 8",variable:"$space-8",value:"32px"},{name:"Space 10",variable:"$space-10",value:"40px"},{name:"Space 12",variable:"$space-12",value:"48px"},{name:"Space 14",variable:"$space-14",value:"56px"},{name:"Space 16",variable:"$space-16",value:"64px"},{name:"Space 20",variable:"$space-20",value:"80px"},{name:"Space 24",variable:"$space-24",value:"96px"},{name:"Space 32",variable:"$space-32",value:"128px"}];const S={class:"spacers spacers--horizontal"},d={class:"spacer"},b={class:"spacer__variable"},n={__name:"Spacers",setup(y){return(f,h)=>(r(),s("ul",S,[(r(!0),s(o,null,i(v(_),a=>(r(),s("li",null,[c("div",d,[c("div",{class:"spacer__sample",style:u("width:"+a.value+"; height:"+a.value+";")},null,4),c("div",b,m(a.variable),1)])]))),256))]))}},x=n;n.__docgenInfo={exportName:"default",displayName:"Spacers",description:"",tags:{},sourceFiles:["C:/Users/svens/Projects/PZH/style-library/src/components/Spacers/Spacers.vue"]};const $={title:"HTML Componenten/Spacers",component:x},e={args:{}};var p,l,t;e.parameters={...e.parameters,docs:{...(p=e.parameters)==null?void 0:p.docs,source:{originalSource:`{
+import {
+  c as s,
+  F as o,
+  r as i,
+  u as v,
+  o as r,
+  a as c,
+  j as u,
+  t as m,
+} from "./vue.esm-bundler-c6369bcc.js";
+const _ = [
+  { name: "Space 1", variable: "$space-1", value: "4px" },
+  { name: "Space 2", variable: "$space-2", value: "8px" },
+  { name: "Space 3", variable: "$space-3", value: "12px" },
+  { name: "Space 4", variable: "$space-4", value: "16px" },
+  { name: "Space 5", variable: "$space-5", value: "20px" },
+  { name: "Space 6", variable: "$space-6", value: "24px" },
+  { name: "Space 8", variable: "$space-8", value: "32px" },
+  { name: "Space 10", variable: "$space-10", value: "40px" },
+  { name: "Space 12", variable: "$space-12", value: "48px" },
+  { name: "Space 14", variable: "$space-14", value: "56px" },
+  { name: "Space 16", variable: "$space-16", value: "64px" },
+  { name: "Space 20", variable: "$space-20", value: "80px" },
+  { name: "Space 24", variable: "$space-24", value: "96px" },
+  { name: "Space 32", variable: "$space-32", value: "128px" },
+];
+const S = { class: "spacers spacers--horizontal" },
+  d = { class: "spacer" },
+  b = { class: "spacer__variable" },
+  n = {
+    __name: "Spacers",
+    setup(y) {
+      return (f, h) => (
+        r(),
+        s("ul", S, [
+          (r(!0),
+          s(
+            o,
+            null,
+            i(
+              v(_),
+              (a) => (
+                r(),
+                s("li", null, [
+                  c("div", d, [
+                    c(
+                      "div",
+                      {
+                        class: "spacer__sample",
+                        style: u(
+                          "width:" + a.value + "; height:" + a.value + ";"
+                        ),
+                      },
+                      null,
+                      4
+                    ),
+                    c("div", b, m(a.variable), 1),
+                  ]),
+                ])
+              )
+            ),
+            256
+          )),
+        ])
+      );
+    },
+  },
+  x = n;
+n.__docgenInfo = {
+  exportName: "default",
+  displayName: "Spacers",
+  description: "",
+  tags: {},
+  sourceFiles: [
+    "C:/Users/svens/Projects/PZH/style-library/src/components/Spacers/Spacers.vue",
+  ],
+};
+const $ = { title: "Style Components/Spacers", component: x },
+  e = { args: {} };
+var p, l, t;
+e.parameters = {
+  ...e.parameters,
+  docs: {
+    ...((p = e.parameters) == null ? void 0 : p.docs),
+    source: {
+      originalSource: `{
   args: {}
-}`,...(t=(l=e.parameters)==null?void 0:l.docs)==null?void 0:t.source}}};const g=["Spacers"],z=Object.freeze(Object.defineProperty({__proto__:null,Spacers:e,__namedExportsOrder:g,default:$},Symbol.toStringTag,{value:"Module"}));export{z as S,e as a};
+}`,
+      ...((t = (l = e.parameters) == null ? void 0 : l.docs) == null
+        ? void 0
+        : t.source),
+    },
+  },
+};
+const g = ["Spacers"],
+  z = Object.freeze(
+    Object.defineProperty(
+      { __proto__: null, Spacers: e, __namedExportsOrder: g, default: $ },
+      Symbol.toStringTag,
+      { value: "Module" }
+    )
+  );
+export { z as S, e as a };
 //# sourceMappingURL=Spacers.stories-b2a8fcb9.js.map

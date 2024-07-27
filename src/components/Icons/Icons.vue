@@ -13,6 +13,11 @@
 
 <style lang="scss">
 @import "../../scss/mixins/container.scss";
+
+body {
+  padding: 24px 0 !important;
+}
+
 .docblock-source {
   margin-top: 0;
 }

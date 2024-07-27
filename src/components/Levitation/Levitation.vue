@@ -20,15 +20,17 @@
 @import "../../scss/mixins/levitation.scss";
 @import "../../scss/mixins/container.scss";
 
+body {
+  padding: 24px 0 !important;
+}
+
 .levitation {
   @include container;
   list-style: none;
   margin: 0;
-  padding: 0;
   display: inline-flex;
   flex-direction: column;
   gap: 24px;
-  padding: 24px;
 
   &__sample {
     padding: 24px;

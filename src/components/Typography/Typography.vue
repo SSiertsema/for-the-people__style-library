@@ -51,6 +51,10 @@ const textSnippet = `
 @import "../../scss/mixins/typography.scss";
 @import "../../scss/mixins/container.scss";
 
+body {
+  padding: 24px 0 !important;
+}
+
 .typography {
   @include container;
   list-style: none;

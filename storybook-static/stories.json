@@ -1,1 +1,194 @@
-{"v":3,"stories":{"pzh-style-library--docs":{"id":"pzh-style-library--docs","title":"PZH Style Library","name":"Docs","importPath":"./src/Configure.mdx","storiesImports":[],"tags":["unattached-mdx","docs"],"kind":"PZH Style Library","story":"Docs","parameters":{"__id":"pzh-style-library--docs","docsOnly":true,"fileName":"./src/Configure.mdx"}},"html-componenten-icons--rationales":{"id":"html-componenten-icons--rationales","title":"HTML Componenten/Icons","name":"Rationales","importPath":"./src/components/Icons/Icons.mdx","storiesImports":["./src/components/Icons/Icons.stories.js"],"tags":["attached-mdx","docs"],"kind":"HTML Componenten/Icons","story":"Rationales","parameters":{"__id":"html-componenten-icons--rationales","docsOnly":true,"fileName":"./src/components/Icons/Icons.mdx"}},"html-componenten-kleuren--rationales":{"id":"html-componenten-kleuren--rationales","title":"HTML Componenten/Kleuren","name":"Rationales","importPath":"./src/components/Kleuren/Kleuren.mdx","storiesImports":["./src/components/Kleuren/Kleuren.stories.js"],"tags":["attached-mdx","docs"],"kind":"HTML Componenten/Kleuren","story":"Rationales","parameters":{"__id":"html-componenten-kleuren--rationales","docsOnly":true,"fileName":"./src/components/Kleuren/Kleuren.mdx"}},"html-componenten-levitation--rationales":{"id":"html-componenten-levitation--rationales","title":"HTML Componenten/Levitation","name":"Rationales","importPath":"./src/components/Levitation/Levitation.mdx","storiesImports":["./src/components/Levitation/Levitation.stories.js"],"tags":["attached-mdx","docs"],"kind":"HTML Componenten/Levitation","story":"Rationales","parameters":{"__id":"html-componenten-levitation--rationales","docsOnly":true,"fileName":"./src/components/Levitation/Levitation.mdx"}},"html-componenten-radii--rationales":{"id":"html-componenten-radii--rationales","title":"HTML Componenten/Radii","name":"Rationales","importPath":"./src/components/Radii/Radii.mdx","storiesImports":["./src/components/Radii/Radii.stories.js"],"tags":["attached-mdx","docs"],"kind":"HTML Componenten/Radii","story":"Rationales","parameters":{"__id":"html-componenten-radii--rationales","docsOnly":true,"fileName":"./src/components/Radii/Radii.mdx"}},"html-componenten-spacers--rationales":{"id":"html-componenten-spacers--rationales","title":"HTML Componenten/Spacers","name":"Rationales","importPath":"./src/components/Spacers/Spacers.mdx","storiesImports":["./src/components/Spacers/Spacers.stories.js"],"tags":["attached-mdx","docs"],"kind":"HTML Componenten/Spacers","story":"Rationales","parameters":{"__id":"html-componenten-spacers--rationales","docsOnly":true,"fileName":"./src/components/Spacers/Spacers.mdx"}},"html-componenten-typography--rationales":{"id":"html-componenten-typography--rationales","title":"HTML Componenten/Typography","name":"Rationales","importPath":"./src/components/Typography/Typography.mdx","storiesImports":["./src/components/Typography/Typography.stories.js"],"tags":["attached-mdx","docs"],"kind":"HTML Componenten/Typography","story":"Rationales","parameters":{"__id":"html-componenten-typography--rationales","docsOnly":true,"fileName":"./src/components/Typography/Typography.mdx"}},"html-componenten-icons--icons":{"id":"html-componenten-icons--icons","name":"Icons","title":"HTML Componenten/Icons","importPath":"./src/components/Icons/Icons.stories.js","tags":["story"],"kind":"HTML Componenten/Icons","story":"Icons","parameters":{"__id":"html-componenten-icons--icons","docsOnly":false,"fileName":"./src/components/Icons/Icons.stories.js"}},"html-componenten-kleuren--kleuren":{"id":"html-componenten-kleuren--kleuren","name":"Kleuren","title":"HTML Componenten/Kleuren","importPath":"./src/components/Kleuren/Kleuren.stories.js","tags":["story"],"kind":"HTML Componenten/Kleuren","story":"Kleuren","parameters":{"__id":"html-componenten-kleuren--kleuren","docsOnly":false,"fileName":"./src/components/Kleuren/Kleuren.stories.js"}},"html-componenten-levitation--levitation":{"id":"html-componenten-levitation--levitation","name":"Levitation","title":"HTML Componenten/Levitation","importPath":"./src/components/Levitation/Levitation.stories.js","tags":["story"],"kind":"HTML Componenten/Levitation","story":"Levitation","parameters":{"__id":"html-componenten-levitation--levitation","docsOnly":false,"fileName":"./src/components/Levitation/Levitation.stories.js"}},"html-componenten-radii--radii":{"id":"html-componenten-radii--radii","name":"Radii","title":"HTML Componenten/Radii","importPath":"./src/components/Radii/Radii.stories.js","tags":["story"],"kind":"HTML Componenten/Radii","story":"Radii","parameters":{"__id":"html-componenten-radii--radii","docsOnly":false,"fileName":"./src/components/Radii/Radii.stories.js"}},"html-componenten-spacers--spacers":{"id":"html-componenten-spacers--spacers","name":"Spacers","title":"HTML Componenten/Spacers","importPath":"./src/components/Spacers/Spacers.stories.js","tags":["story"],"kind":"HTML Componenten/Spacers","story":"Spacers","parameters":{"__id":"html-componenten-spacers--spacers","docsOnly":false,"fileName":"./src/components/Spacers/Spacers.stories.js"}},"html-componenten-typography--typography":{"id":"html-componenten-typography--typography","name":"Typography","title":"HTML Componenten/Typography","importPath":"./src/components/Typography/Typography.stories.js","tags":["story"],"kind":"HTML Componenten/Typography","story":"Typography","parameters":{"__id":"html-componenten-typography--typography","docsOnly":false,"fileName":"./src/components/Typography/Typography.stories.js"}}}}
+{
+  "v": 3,
+  "stories": {
+    "pzh-style-library--docs": {
+      "id": "pzh-style-library--docs",
+      "title": "PZH Style Library",
+      "name": "Docs",
+      "importPath": "./src/Configure.mdx",
+      "storiesImports": [],
+      "tags": ["unattached-mdx", "docs"],
+      "kind": "PZH Style Library",
+      "story": "Docs",
+      "parameters": {
+        "__id": "pzh-style-library--docs",
+        "docsOnly": true,
+        "fileName": "./src/Configure.mdx"
+      }
+    },
+    "html-componenten-icons--rationales": {
+      "id": "html-componenten-icons--rationales",
+      "title": "Style Components/Icons",
+      "name": "Rationales",
+      "importPath": "./src/components/Icons/Icons.mdx",
+      "storiesImports": ["./src/components/Icons/Icons.stories.js"],
+      "tags": ["attached-mdx", "docs"],
+      "kind": "Style Components/Icons",
+      "story": "Rationales",
+      "parameters": {
+        "__id": "html-componenten-icons--rationales",
+        "docsOnly": true,
+        "fileName": "./src/components/Icons/Icons.mdx"
+      }
+    },
+    "html-componenten-kleuren--rationales": {
+      "id": "html-componenten-kleuren--rationales",
+      "title": "Style Components/Kleuren",
+      "name": "Rationales",
+      "importPath": "./src/components/Kleuren/Kleuren.mdx",
+      "storiesImports": ["./src/components/Kleuren/Kleuren.stories.js"],
+      "tags": ["attached-mdx", "docs"],
+      "kind": "Style Components/Kleuren",
+      "story": "Rationales",
+      "parameters": {
+        "__id": "html-componenten-kleuren--rationales",
+        "docsOnly": true,
+        "fileName": "./src/components/Kleuren/Kleuren.mdx"
+      }
+    },
+    "html-componenten-levitation--rationales": {
+      "id": "html-componenten-levitation--rationales",
+      "title": "Style Components/Levitation",
+      "name": "Rationales",
+      "importPath": "./src/components/Levitation/Levitation.mdx",
+      "storiesImports": ["./src/components/Levitation/Levitation.stories.js"],
+      "tags": ["attached-mdx", "docs"],
+      "kind": "Style Components/Levitation",
+      "story": "Rationales",
+      "parameters": {
+        "__id": "html-componenten-levitation--rationales",
+        "docsOnly": true,
+        "fileName": "./src/components/Levitation/Levitation.mdx"
+      }
+    },
+    "html-componenten-radii--rationales": {
+      "id": "html-componenten-radii--rationales",
+      "title": "Style Components/Radii",
+      "name": "Rationales",
+      "importPath": "./src/components/Radii/Radii.mdx",
+      "storiesImports": ["./src/components/Radii/Radii.stories.js"],
+      "tags": ["attached-mdx", "docs"],
+      "kind": "Style Components/Radii",
+      "story": "Rationales",
+      "parameters": {
+        "__id": "html-componenten-radii--rationales",
+        "docsOnly": true,
+        "fileName": "./src/components/Radii/Radii.mdx"
+      }
+    },
+    "html-componenten-spacers--rationales": {
+      "id": "html-componenten-spacers--rationales",
+      "title": "Style Components/Spacers",
+      "name": "Rationales",
+      "importPath": "./src/components/Spacers/Spacers.mdx",
+      "storiesImports": ["./src/components/Spacers/Spacers.stories.js"],
+      "tags": ["attached-mdx", "docs"],
+      "kind": "Style Components/Spacers",
+      "story": "Rationales",
+      "parameters": {
+        "__id": "html-componenten-spacers--rationales",
+        "docsOnly": true,
+        "fileName": "./src/components/Spacers/Spacers.mdx"
+      }
+    },
+    "html-componenten-typography--rationales": {
+      "id": "html-componenten-typography--rationales",
+      "title": "Style Components/Typography",
+      "name": "Rationales",
+      "importPath": "./src/components/Typography/Typography.mdx",
+      "storiesImports": ["./src/components/Typography/Typography.stories.js"],
+      "tags": ["attached-mdx", "docs"],
+      "kind": "Style Components/Typography",
+      "story": "Rationales",
+      "parameters": {
+        "__id": "html-componenten-typography--rationales",
+        "docsOnly": true,
+        "fileName": "./src/components/Typography/Typography.mdx"
+      }
+    },
+    "html-componenten-icons--icons": {
+      "id": "html-componenten-icons--icons",
+      "name": "Icons",
+      "title": "Style Components/Icons",
+      "importPath": "./src/components/Icons/Icons.stories.js",
+      "tags": ["story"],
+      "kind": "Style Components/Icons",
+      "story": "Icons",
+      "parameters": {
+        "__id": "html-componenten-icons--icons",
+        "docsOnly": false,
+        "fileName": "./src/components/Icons/Icons.stories.js"
+      }
+    },
+    "html-componenten-kleuren--kleuren": {
+      "id": "html-componenten-kleuren--kleuren",
+      "name": "Kleuren",
+      "title": "Style Components/Kleuren",
+      "importPath": "./src/components/Kleuren/Kleuren.stories.js",
+      "tags": ["story"],
+      "kind": "Style Components/Kleuren",
+      "story": "Kleuren",
+      "parameters": {
+        "__id": "html-componenten-kleuren--kleuren",
+        "docsOnly": false,
+        "fileName": "./src/components/Kleuren/Kleuren.stories.js"
+      }
+    },
+    "html-componenten-levitation--levitation": {
+      "id": "html-componenten-levitation--levitation",
+      "name": "Levitation",
+      "title": "Style Components/Levitation",
+      "importPath": "./src/components/Levitation/Levitation.stories.js",
+      "tags": ["story"],
+      "kind": "Style Components/Levitation",
+      "story": "Levitation",
+      "parameters": {
+        "__id": "html-componenten-levitation--levitation",
+        "docsOnly": false,
+        "fileName": "./src/components/Levitation/Levitation.stories.js"
+      }
+    },
+    "html-componenten-radii--radii": {
+      "id": "html-componenten-radii--radii",
+      "name": "Radii",
+      "title": "Style Components/Radii",
+      "importPath": "./src/components/Radii/Radii.stories.js",
+      "tags": ["story"],
+      "kind": "Style Components/Radii",
+      "story": "Radii",
+      "parameters": {
+        "__id": "html-componenten-radii--radii",
+        "docsOnly": false,
+        "fileName": "./src/components/Radii/Radii.stories.js"
+      }
+    },
+    "html-componenten-spacers--spacers": {
+      "id": "html-componenten-spacers--spacers",
+      "name": "Spacers",
+      "title": "Style Components/Spacers",
+      "importPath": "./src/components/Spacers/Spacers.stories.js",
+      "tags": ["story"],
+      "kind": "Style Components/Spacers",
+      "story": "Spacers",
+      "parameters": {
+        "__id": "html-componenten-spacers--spacers",
+        "docsOnly": false,
+        "fileName": "./src/components/Spacers/Spacers.stories.js"
+      }
+    },
+    "html-componenten-typography--typography": {
+      "id": "html-componenten-typography--typography",
+      "name": "Typography",
+      "title": "Style Components/Typography",
+      "importPath": "./src/components/Typography/Typography.stories.js",
+      "tags": ["story"],
+      "kind": "Style Components/Typography",
+      "story": "Typography",
+      "parameters": {
+        "__id": "html-componenten-typography--typography",
+        "docsOnly": false,
+        "fileName": "./src/components/Typography/Typography.stories.js"
+      }
+    }
+  }
+}

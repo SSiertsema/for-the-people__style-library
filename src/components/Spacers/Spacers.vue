@@ -17,6 +17,10 @@
 <style lang="scss">
 @import "../../scss/mixins/container.scss";
 
+body {
+  padding: 24px 0 !important;
+}
+
 .spacers {
   @include container;
   list-style: none;

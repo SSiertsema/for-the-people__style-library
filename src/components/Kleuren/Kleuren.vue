@@ -1,7 +1,7 @@
 <template>
   <div class="colors">
     <div v-for="(colors, category) in colorsConfig" :key="category">
-      <h2>{{ category }}</h2>
+      <h2 class="color-swatch-group-name">{{ category }}</h2>
       <ul class="color-swatch-group">
         <li v-for="color in colors" :key="color.class">
           <div class="color-swatch">
@@ -23,13 +23,21 @@
 
 <style lang="scss">
 @import "../../scss/mixins/container.scss";
+
+body {
+  padding: 24px 0 !important;
+}
+
 .colors {
   @include container;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 }
 
+.color-swatch-group-name {
+  margin-top: 0;
+}
 .color-swatch-group {
   list-style: none;
   margin: 0;
