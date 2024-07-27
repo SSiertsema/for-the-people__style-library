@@ -16,7 +16,10 @@
 </template>
 
 <style lang="scss">
+@import "../../scss/mixins/container.scss";
+
 .radii {
+  @include container;
   display: flex;
   gap: 24px;
   list-style: none;

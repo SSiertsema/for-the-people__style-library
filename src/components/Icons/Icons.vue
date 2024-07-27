@@ -12,11 +12,13 @@
 </template>
 
 <style lang="scss">
+@import "../../scss/mixins/container.scss";
 .docblock-source {
   margin-top: 0;
 }
 
 .iconography {
+  @include container;
   padding: 24px;
   list-style: none;
   padding: 0;

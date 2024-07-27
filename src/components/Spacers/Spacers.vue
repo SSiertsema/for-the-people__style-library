@@ -1,5 +1,5 @@
 <template>
-  <ul class="spacers spacers--horizontal">
+  <ul class="spacers">
     <li v-for="spacer in spacers">
       <div class="spacer">
         <div
@@ -15,17 +15,15 @@
 </template>
 
 <style lang="scss">
+@import "../../scss/mixins/container.scss";
+
 .spacers {
+  @include container;
   list-style: none;
   margin: 0;
-  padding: 0;
   display: inline-flex;
   gap: 12px;
-  padding: 24px;
-
-  &--horizontal {
-    flex-direction: column;
-  }
+  flex-direction: column;
 }
 
 .spacer {

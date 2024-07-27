@@ -37,6 +37,10 @@
 @import "../../scss/mixins/container.scss";
 @import "../../scss/mixins/grid.scss";
 
+body {
+  padding: 0 !important;
+}
+
 .grid-collection {
   display: flex;
   flex-direction: column;

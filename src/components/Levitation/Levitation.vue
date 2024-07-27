@@ -18,8 +18,10 @@
 <style lang="scss">
 @import "../../scss/variables/radii.scss";
 @import "../../scss/mixins/levitation.scss";
+@import "../../scss/mixins/container.scss";
 
 .levitation {
+  @include container;
   list-style: none;
   margin: 0;
   padding: 0;

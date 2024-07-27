@@ -22,7 +22,9 @@
 </template>
 
 <style lang="scss">
+@import "../../scss/mixins/container.scss";
 .colors {
+  @include container;
   display: flex;
   flex-direction: column;
   gap: 24px;
