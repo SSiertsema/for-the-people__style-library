@@ -25,12 +25,12 @@ body {
 }
 
 .levitation {
-  @include container;
   list-style: none;
   margin: 0;
   display: inline-flex;
   flex-direction: column;
   gap: 24px;
+  @include container;
 
   &__sample {
     padding: 24px;

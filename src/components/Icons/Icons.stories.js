@@ -1,7 +1,7 @@
 import cmp from "./Icons.vue";
 
 export default {
-  title: "Style Components/Icons",
+  title: "Icons",
   component: cmp,
   parameters: {
     design: {

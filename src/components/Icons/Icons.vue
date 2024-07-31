@@ -23,7 +23,6 @@ body {
 }
 
 .iconography {
-  @include container;
   padding: 24px;
   list-style: none;
   padding: 0;
@@ -31,6 +30,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  @include container;
 
   p {
     max-width: 70%;

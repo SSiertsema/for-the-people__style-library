@@ -29,10 +29,10 @@ body {
 }
 
 .colors {
-  @include container;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  @include container;
 }
 
 .color-swatch-group-name {

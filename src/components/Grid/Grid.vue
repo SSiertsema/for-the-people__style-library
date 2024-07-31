@@ -48,14 +48,16 @@ body {
 }
 
 .container {
-  @include container;
   background-color: #d5d5d5;
+
+  @include container;
 }
 
 .grid {
-  @include grid;
   background-color: #750047;
   overflow: hidden;
+
+  @include grid;
 
   > * {
     background-color: #d76aac;

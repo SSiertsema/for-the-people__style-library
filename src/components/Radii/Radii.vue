@@ -22,11 +22,11 @@ body {
   padding: 24px 0 !important;
 }
 .radii {
-  @include container;
   display: flex;
   gap: 24px;
   list-style: none;
   margin: 0;
+  @include container;
 }
 
 .radius-card {

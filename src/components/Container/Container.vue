@@ -13,8 +13,8 @@ body {
 }
 
 .container {
-  @include container();
   background-color: #d5d5d5;
+  @include container();
   &-content {
     background-color: #eee;
     padding: 24px;

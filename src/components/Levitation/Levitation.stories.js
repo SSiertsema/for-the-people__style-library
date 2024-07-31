@@ -1,7 +1,7 @@
 import cmp from "./Levitation.vue";
 
 export default {
-  title: "Style Components/Levitation",
+  title: "Levitation",
   component: cmp,
   parameters: {
     design: {

@@ -1,7 +1,7 @@
 import cmp from "./Radii.vue";
 
 export default {
-  title: "Style Components/Radii",
+  title: "Radii",
   component: cmp,
   parameters: {
     design: {

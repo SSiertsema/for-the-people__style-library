@@ -22,12 +22,12 @@ body {
 }
 
 .spacers {
-  @include container;
   list-style: none;
   margin: 0;
   display: inline-flex;
   gap: 12px;
   flex-direction: column;
+  @include container;
 }
 
 .spacer {

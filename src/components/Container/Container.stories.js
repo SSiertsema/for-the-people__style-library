@@ -1,7 +1,7 @@
 import cmp from "./Container.vue";
 
 export default {
-  title: "Style Components/Container",
+  title: "Container",
   component: cmp,
   parameters: {
     design: {

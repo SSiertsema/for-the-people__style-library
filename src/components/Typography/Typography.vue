@@ -56,11 +56,11 @@ body {
 }
 
 .typography {
-  @include container;
   list-style: none;
   display: inline-flex;
   flex-direction: column;
   gap: 24px;
+  @include container;
 
   li {
     border-left: 12px solid #eee;

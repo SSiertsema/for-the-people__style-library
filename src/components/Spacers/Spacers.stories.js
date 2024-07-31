@@ -1,7 +1,7 @@
 import cmp from "./Spacers.vue";
 
 export default {
-  title: "Style Components/Spacers",
+  title: "Spacers",
   component: cmp,
   parameters: {
     design: {

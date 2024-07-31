@@ -1,7 +1,7 @@
 import cmp from "./Grid.vue";
 
 export default {
-  title: "Style Components/Grid",
+  title: "Grid",
   component: cmp,
   parameters: {
     design: {
