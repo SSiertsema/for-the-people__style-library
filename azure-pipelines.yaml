@@ -1,4 +1,4 @@
-1trigger:
+trigger:
   branches:
     include:
       - production
@@ -8,14 +8,14 @@ variables:
   azureARMConnection: "PZH - Microsoft Azure Enterprise"
 
   # Web app name and resource group
-  webAppName: "af85ec9a25a854c96b226964"
+  webAppName: "i92c7db76f7d04c16a336cd6"
   imageName: "style-library"
   rg: "pzh-style-library"
   SlotName: "production"
   specifySlotOrASE: false
 
   # Azure Container Registry to publish to
-  azureContainerRegistry: "af85ec9a25a854c96b226964.azurecr.io"
+  azureContainerRegistry: "i92c7db76f7d04c16a336cd6.azurecr.io"
 
   # Agent VM image name
   vmImageName: "ubuntu-latest"
