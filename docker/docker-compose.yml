@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  style-library:
+    build: .
+    container_name: style-library-webapp
+    network_mode: "inner_network"
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    env_file:
+      - ./.env
+    ports:
+      - "8080:80"
