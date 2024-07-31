@@ -1,4 +1,4 @@
-trigger:
+1trigger:
   branches:
     include:
       - production
