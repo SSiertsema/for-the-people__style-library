@@ -42,10 +42,12 @@
 
 @mixin static-typography($category: "heading", $type: "l", $isStrong: false) {
   font-family: Karbon;
-  @if ($category == "heading") {
-    @include heading($type);
-  } @else {
-    @include text($type, $isStrong);
+  & {
+    @if ($category == "heading") {
+      @include heading($type);
+    } @else {
+      @include text($type, $isStrong);
+    }
   }
 }
 
