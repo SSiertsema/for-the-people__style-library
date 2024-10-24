@@ -58,18 +58,11 @@ Publiceert nieuwe versie naar NPM en publiceert utility classes naar het CDN
 1. Zorg dat je ingelogd bent bij NPM. Zo niet voer in command line commando 'npm login' uit
 1. Voer in command line commando 'npm run publish-all' uit
 
-#### Fonts to CDN
+#### Deploy library to CDN 
 
-Need to Migrate from pzh-style-library
+npm publish all
 
-#### Icons to CDN
 
-1. Log-in op Fontawesome (Vraag Tim Terra naar credentials)
-1. Update .svg bestanden in folder src/assetc/icons
-1. ...
-1. ...
-   Need to Migrate from pzh-style-library
 
-#### Images to CDN
 
-Need to Migrate from pzh-style-library
+
