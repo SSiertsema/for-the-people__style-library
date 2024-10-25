@@ -62,6 +62,18 @@ Publiceert nieuwe versie naar NPM en publiceert utility classes naar het CDN
 
 npm publish all
 
+### Deploy utility classes to CDN (inclusief fonts)
+
+```bash
+npm run deploy-utility-classes
+```
+
+### Deploy static assets to CDN (inclusief fonts)
+
+```bash
+npm run deploy-assets
+```
+
 
 
 
