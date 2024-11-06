@@ -74,7 +74,7 @@ npm i -D @pzh-temporary/style-library
 2. In scss bestand:
 
 ```SCSS
-@import '@pzh-temporary/style-library/variables/colors.scss';
+@use '@pzh-temporary/style-library/variables/colors.scss' as *;
 div {
     background-color: $color-green-500;
 }

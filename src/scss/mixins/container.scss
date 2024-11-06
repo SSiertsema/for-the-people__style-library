@@ -1,5 +1,5 @@
-@import "./breakpoint.scss";
-@import "../variables/spacers.scss";
+@use "./breakpoint.scss" as *;
+@use "../variables/spacers.scss" as *;
 
 @mixin container() {
   padding-left: $space-4;

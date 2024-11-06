@@ -47,9 +47,9 @@ const textSnippet = `
 </script>
 
 <style lang="scss">
-@import "../../scss/fonts.scss";
-@import "../../scss/mixins/typography.scss";
-@import "../../scss/mixins/container.scss";
+@use "../../scss/fonts.scss" as *;
+@use "../../scss/mixins/typography.scss" as *;
+@use "../../scss/mixins/container.scss" as *;
 
 body {
   padding: 24px 0 !important;

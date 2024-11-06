@@ -1,6 +1,6 @@
-@import "./breakpoint.scss";
-@import "./container.scss";
-@import "../variables/spacers.scss";
+@use "./breakpoint.scss" as *;
+@use "./container.scss" as *;
+@use "../variables/spacers.scss" as *;
 
 @mixin grid() {
   display: grid;

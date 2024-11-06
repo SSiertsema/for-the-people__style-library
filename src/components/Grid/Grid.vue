@@ -32,10 +32,11 @@
 </template>
 
 <style lang="scss">
-@import "../../scss/variables/spacers.scss";
-@import "../../scss/fonts.scss";
-@import "../../scss/mixins/container.scss";
-@import "../../scss/mixins/grid.scss";
+@use "../../scss/variables/spacers.scss" as *; 
+@use "../../scss/fonts.scss" as *;
+@use "../../scss/mixins/container.scss" as *;
+@use "../../scss/mixins/grid.scss" as *;
+@use "../../scss/mixins/breakpoint.scss" as *;
 
 body {
   padding: 0 !important;

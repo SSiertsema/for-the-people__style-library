@@ -1,4 +1,4 @@
-@import "../variables/box-shadows.scss";
+@use "../variables/box-shadows.scss" as *;
 
 @mixin levitate($level: 1) {
   @if ($level == 0) {

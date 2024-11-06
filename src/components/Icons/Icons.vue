@@ -12,7 +12,7 @@
 </template>
 
 <style lang="scss">
-@import "../../scss/mixins/container.scss";
+@use "../../scss/mixins/container.scss" as *;
 
 body {
   padding: 24px 0 !important;

@@ -16,9 +16,9 @@
 </template>
 
 <style lang="scss">
-@import "../../scss/variables/radii.scss";
-@import "../../scss/mixins/levitation.scss";
-@import "../../scss/mixins/container.scss";
+@use "../../scss/variables/radii.scss" as *;
+@use "../../scss/mixins/levitation.scss" as *;
+@use "../../scss/mixins/container.scss" as *;
 
 body {
   padding: 24px 0 !important;

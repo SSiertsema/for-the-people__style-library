@@ -1,5 +1,5 @@
-@import "../fonts.scss";
-@import "../mixins/typography.scss";
+@use "../fonts.scss" as *;
+@use "../mixins/typography.scss" as *;
 
 .pzh-heading-s {
   @include typography("heading", "s");
