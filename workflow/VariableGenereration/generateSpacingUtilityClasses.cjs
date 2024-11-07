@@ -12,7 +12,7 @@ async function run() {
   const m = await import(src);
   const spacers = m.default;
 
-  const includes = ['@import "../variables/spacers.scss";'];
+  const includes = ['@use "../variables/spacers.scss" as *;'];
 
   const scssPartials = [...includes];
 
