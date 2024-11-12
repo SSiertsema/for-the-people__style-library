@@ -10,7 +10,7 @@ variables:
   # Web app name and resource group
   webAppName: "i92c7db76f7d04c16a336cd6"
   imageName: "style-library"
-  rg: "pzh-style-library"
+  rg: "style-library"
   SlotName: "production"
   specifySlotOrASE: false
 

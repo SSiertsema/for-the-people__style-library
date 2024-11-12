@@ -1,7 +1,7 @@
 @font-face {
   font-family: "{{fontname}}";
-  src: url("https://cdn-pzh.azureedge.net/web/pzh-style-library/assets/icons/fonts/{{fontname}}.woff2?t={{timestamp}}") format("woff2"),
-  url("https://cdn-pzh.azureedge.net/web/pzh-style-library/assets/icons/fonts/{{fontname}}.woff?t={{timestamp}}") format("woff");
+  src: url("https://cdn-pzh.azureedge.net/web/style-library/assets/icons/fonts/{{fontname}}.woff2?t={{timestamp}}") format("woff2"),
+  url("https://cdn-pzh.azureedge.net/web/style-library/assets/icons/fonts/{{fontname}}.woff?t={{timestamp}}") format("woff");
 }
 
 [class^="{{prefix}}-"], [class*=" {{prefix}}-"] {

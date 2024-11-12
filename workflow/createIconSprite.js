@@ -1,14 +1,16 @@
 // https://www.npmjs.com/package/svgtofont
 // Create spriter instance (see below for `config` examples)
-
-const { uploadBlob } = require("./azureStorageConnector");
+const path = require("path");
+const uploadBlob = require(path.resolve(
+  __dirname,
+  "../utilities/uploadBlob.cjs"
+));
 require("dotenv").config();
-const package = "pzh-style-library";
 
-const glob = require("glob");
+const glob = require(path.resolve(__dirname, "./utilities/glob.cjs"));
 const consola = require("consola");
 const fs = require("fs");
-const config = require("../config");
+const config = require(path.resolve(__dirname, "../config"));
 const SVGSpriter = require("svg-sprite");
 const spriter = new SVGSpriter({
   mode: {
@@ -52,7 +54,10 @@ async function run() {
   fs.mkdirSync(dest, { recursive: true });
   await generateSprite();
   const sprite = fs.readFileSync(`${dest}/icons.sprite.svg`);
-  await uploadBlob(sprite, `${package}/assets/icons/icons.sprite.svg`);
+  await uploadBlob(
+    sprite,
+    `${config.cdnContainer}/assets/icons/icons.sprite.svg`
+  );
 }
 
 run().then(() => {

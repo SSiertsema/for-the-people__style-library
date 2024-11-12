@@ -1,14 +1,24 @@
 const fs = require("fs");
 const path = require("path");
-const sass = require("sass");
-const { glob } = require("glob");
 const consola = require("consola");
-const config = require("../../config.cjs");
-const targetGlob = `${config.paths.src}/scss/utility-classes/**/*.scss`;
-const packageConfig = require("../../package.json");
+const sass = require("sass");
 const uglifycss = require("uglifycss");
+const glob = require(path.resolve(__dirname, "../utilities/glob.cjs"));
 
-const destFolder = `${config.paths.publishDest}/${packageConfig.version}/css/utility-classes`;
+const packageConfig = require(path.resolve(__dirname, "../../package.json"));
+const config = require(path.resolve(__dirname, "../../config.cjs"));
+
+const targetGlob = path.normalize(
+  `${config.paths.src}/scss/utility-classes/**/*.scss`
+);
+
+const destFolder = path.normalize(
+  `${config.paths.publishDest}/${packageConfig.version}/css/utility-classes`
+);
+
+if (!fs.existsSync(destFolder)) {
+  fs.mkdirSync(destFolder, { recursive: true });
+}
 
 async function preprocessUtilityClasses() {
   const matches = await glob(targetGlob);

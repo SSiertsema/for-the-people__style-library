@@ -1,14 +1,17 @@
 // https://www.npmjs.com/package/svgtofont
 
-const svgtofont = require("svgtofont");
 const path = require("path");
-const config = require("../config");
+const svgtofont = require("svgtofont");
+const config = require(path.resolve(__dirname, "../config"));
 const src = config.paths.icons;
 const dest = path.resolve(config.paths.dest, "font-icon");
-const package = "pzh-style-library";
 const fs = require("fs");
 
-const { uploadBlob } = require("./azureStorageConnector");
+const uploadBlob = require(path.resolve(
+  __dirname,
+  "../utilities/uploadBlob.cjs"
+));
+
 require("dotenv").config();
 
 async function generateFontAndStyles(fontStyle) {
@@ -37,19 +40,19 @@ async function deploy(fontStyle) {
   const woffContents = fs.readFileSync(`${dest}/icons-${fontStyle}.woff`);
   await uploadBlob(
     woffContents,
-    `${package}/assets/icons/fonts/icons-${fontStyle}.woff`
+    `${config.cdnContainer}/assets/icons/fonts/icons-${fontStyle}.woff`
   );
 
   const woff2Contents = fs.readFileSync(`${dest}/icons-${fontStyle}.woff2`);
   await uploadBlob(
     woff2Contents,
-    `${package}/assets/icons/fonts/icons-${fontStyle}.woff2`
+    `${config.cdnContainer}/assets/icons/fonts/icons-${fontStyle}.woff2`
   );
 
   const cssContents = fs.readFileSync(`${dest}/icons-${fontStyle}.css`);
   await uploadBlob(
     cssContents,
-    `${package}/assets/icons/styles/icons-${fontStyle}.css`
+    `${config.cdnContainer}/assets/icons/styles/icons-${fontStyle}.css`
   );
 }
 

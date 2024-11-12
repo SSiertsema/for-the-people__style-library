@@ -1,16 +1,17 @@
 const path = require("path");
 const basePath = path.resolve(__dirname, "./");
 const config = {
+  cdnContainer: "style-library",
   paths: {
     base: basePath,
-    workflow: `${basePath}/workflow`,
-    public: `${basePath}/public`,
-    src: `${basePath}/src`,
-    scss: `${basePath}/src/scss`,
-    icons: `${basePath}/src/assets/icons`,
-    static: `${basePath}/src/static`,
-    dest: `${basePath}/public/dest`,
-    publishDest: `${basePath}/dest`,
+    workflow: path.normalize(`${basePath}/workflow`),
+    public: path.normalize(`${basePath}/public`),
+    src: path.normalize(`${basePath}/src`),
+    scss: path.normalize(`${basePath}/src/scss`),
+    icons: path.normalize(`${basePath}/src/assets/icons`),
+    static: path.normalize(`${basePath}/src/static`),
+    dest: path.normalize(`${basePath}/public/dest`),
+    publishDest: path.normalize(`${basePath}/dest`),
   },
 };
 

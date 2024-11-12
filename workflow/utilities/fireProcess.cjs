@@ -1,15 +1,15 @@
 const { exec } = require("child_process");
 const consola = require("consola");
 
-function fireProcess(
+module.exports = (
   command,
   logCommand = false,
   printStdOut = false,
   printStdErr = false
-) {
+) => {
   if (logCommand) consola.info(`Execute '${command}'`);
   return new Promise((resolve, reject) => {
-    const ls = exec(command, function (error, stdout, stderr) {
+    const childProcess = exec(command, function (error, stdout, stderr) {
       if (error) {
         reject(error);
       }
@@ -17,10 +17,8 @@ function fireProcess(
       if (printStdErr && stderr) consola.warn(stderr);
     });
 
-    ls.on("exit", function () {
+    childProcess.on("exit", function () {
       resolve();
     });
   });
-}
-
-module.exports = fireProcess;
+};
