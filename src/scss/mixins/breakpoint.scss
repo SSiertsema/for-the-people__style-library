@@ -2,6 +2,9 @@
 // Phone - https://gs.statcounter.com/screen-resolution-stats/mobile/netherlands#monthly-202210-202310
 // Tablet - https://gs.statcounter.com/screen-resolution-stats/tablet/netherlands#monthly-202210-202310
 // Desktop - https://gs.statcounter.com/screen-resolution-stats/tablet/netherlands#monthly-202210-202310
+
+@use "sass:map";
+
 $breakpoints: (
   phone: (
     from: 0px,
@@ -42,7 +45,7 @@ $breakpoints: (
 );
 
 @mixin breakpoint-from($bp) {
-  $from: map-get(map-get($breakpoints, $bp), from);
+  $from: map.get(map.get($breakpoints, $bp), from);
 
   @media (min-width: $from) {
     @content;
@@ -50,7 +53,7 @@ $breakpoints: (
 }
 
 @mixin breakpoint-to($bp) {
-  $from: map-get(map-get($breakpoints, $bp), from);
+  $from: map.get(map.get($breakpoints, $bp), from);
   $max-width: $from - 1;
 
   @media (max-width: $max-width) {
@@ -59,8 +62,8 @@ $breakpoints: (
 }
 
 @mixin breakpoint-on($bp) {
-  $from: map-get(map-get($breakpoints, $bp), from);
-  $to: map-get(map-get($breakpoints, $bp), to);
+  $from: map.get(map.get($breakpoints, $bp), from);
+  $to: map.get(map.get($breakpoints, $bp), to);
 
   @media (max-width: $to) and (min-width: $from) {
     @content;
@@ -68,8 +71,8 @@ $breakpoints: (
 }
 
 @mixin breakpoint-from-to($bp-from, $bp-to) {
-  $from: map-get(map-get($breakpoints, $bp-from), from);
-  $to: map-get(map-get($breakpoints, $bp-to), to);
+  $from: map.get(map.get($breakpoints, $bp-from), from);
+  $to: map.get(map.get($breakpoints, $bp-to), to);
 
   @media (max-width: $to) and (min-width: $from) {
     @content;
