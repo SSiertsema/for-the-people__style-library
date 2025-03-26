@@ -8,26 +8,26 @@
   box-sizing: border-box;
 
   @include bp.breakpoint-from(tablet) {
-    padding: 0 $space-20;
+    padding: 0 spacers.$space-20;
   }
 
   @include bp.breakpoint-from(laptop) {
-    padding: 0 $space-24;
+    padding: 0 spacers.$space-24;
   }
 }
 
 @mixin container-with-dna() {
-  $extra-space: $space-12;
-  padding-left: $space-5;
-  padding-right: $space-5 + $extra-space;
+  $extra-space: spacers.$space-12;
+  padding-left: spacers.$space-5;
+  padding-right: spacers.$space-5 + $extra-space;
 
   @include bp.breakpoint-from(tablet) {
-    padding-left: $space-20;
-    padding-right: $space-20 + $extra-space;
+    padding-left: spacers.$space-20;
+    padding-right: spacers.$space-20 + $extra-space;
   }
 
   @include bp.breakpoint-from(laptop) {
-    padding-left: $space-24;
-    padding-right: $space-24 + $extra-space;
+    padding-left: spacers.$space-24;
+    padding-right: spacers.$space-24 + $extra-space;
   }
 }
