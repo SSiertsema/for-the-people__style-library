@@ -1,3 +1,6 @@
 node_modules
 dest
 src/assets/scss/variables
+.env
+.env.*
+!.env.example
