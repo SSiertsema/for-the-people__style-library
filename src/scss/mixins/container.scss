@@ -1,33 +1,33 @@
 @use "./breakpoint.scss" as bp;
-@use "../variables/spacers.scss" as spacers;
+@use "../../dist/scss/tokens" as tokens;
 
 @mixin container() {
-  padding-left: spacers.$space-4;
-  padding-right: spacers.$space-4;
+  padding-left: tokens.$inset-m;
+  padding-right: tokens.$inset-m;
   width: 100%;
   box-sizing: border-box;
 
   @include bp.breakpoint-from(tablet) {
-    padding: 0 spacers.$space-20;
+    padding: 0 tokens.$inset-2xl;
   }
 
   @include bp.breakpoint-from(laptop) {
-    padding: 0 spacers.$space-24;
+    padding: 0 80px; // Larger container padding
   }
 }
 
 @mixin container-with-dna() {
-  $extra-space: spacers.$space-12;
-  padding-left: spacers.$space-5;
-  padding-right: spacers.$space-5 + $extra-space;
+  $extra-space: 48px;
+  padding-left: tokens.$inset-l;
+  padding-right: calc(#{tokens.$inset-l} + #{$extra-space});
 
   @include bp.breakpoint-from(tablet) {
-    padding-left: spacers.$space-20;
-    padding-right: spacers.$space-20 + $extra-space;
+    padding-left: tokens.$inset-2xl;
+    padding-right: calc(#{tokens.$inset-2xl} + #{$extra-space});
   }
 
   @include bp.breakpoint-from(laptop) {
-    padding-left: spacers.$space-24;
-    padding-right: spacers.$space-24 + $extra-space;
+    padding-left: 80px;
+    padding-right: calc(80px + #{$extra-space});
   }
 }

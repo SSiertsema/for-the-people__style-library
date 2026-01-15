@@ -1,21 +1,21 @@
-@use "../variables/colors.scss" as *;
+@use "../../dist/scss/tokens" as *;
 @use "./breakpoint.scss" as *;
 
 @mixin heading($name) {
   font-weight: 500;
   line-height: 1.25;
-  color: $color-blue-500;
-  @if ($name == "s") {
+  color: $text-heading;
+  @if ($name == "xs") {
     font-size: 20px;
-  } @else if ($name == "m") {
+  } @else if ($name == "s") {
     font-size: 24px;
-  } @else if ($name == "l") {
+  } @else if ($name == "m") {
     font-size: 32px;
-  } @else if ($name == "xl") {
+  } @else if ($name == "l") {
     font-size: 40px;
-  } @else if ($name == "xxl") {
+  } @else if ($name == "xl") {
     font-size: 48px;
-  } @else if ($name == "xxxl") {
+  } @else if ($name == "2xl") {
     font-size: 64px;
     line-height: 1.1;
   }
@@ -28,49 +28,57 @@
     font-weight: 600;
   }
 
-  @if ($name == "xs") {
+  @if ($name == "3xs") {
+    font-size: 10px;
+  } @else if ($name == "2xs") {
+    font-size: 12px;
+  } @else if ($name == "xs") {
     font-size: 14px;
   } @else if ($name == "s") {
     font-size: 16px;
   } @else if ($name == "m") {
-    font-size: 20px;
+    font-size: 18px;
   } @else if ($name == "l") {
+    font-size: 20px;
+  } @else if ($name == "xl") {
     font-size: 24px;
+    line-height: 1.25;
+  } @else if ($name == "2xl") {
+    font-size: 28px;
     line-height: 1.25;
   }
 }
 
 @mixin static-typography($category: "heading", $type: "l", $isStrong: false) {
-  font-family: Karbon;
-  & {
-    @if ($category == "heading") {
-      @include heading($type);
-    } @else {
-      @include text($type, $isStrong);
-    }
+  @if ($category == "heading") {
+    font-family: Manrope, sans-serif;
+    @include heading($type);
+  } @else {
+    font-family: "DM Sans", sans-serif;
+    @include text($type, $isStrong);
   }
 }
 
 @mixin typography($category: "heading", $type, $isStrong: false) {
   @if ($category == "heading") {
-    @if ($type == "xxxl") {
-      @include static-typography("heading", "xxl");
+    @if ($type == "2xl") {
+      @include static-typography("heading", "xl");
 
       @include breakpoint-from(laptop) {
         @include static-typography($category, $type);
       }
-    } @else if ($type == "xxl") {
-      @include static-typography("heading", "xl");
-      @include breakpoint-from(laptop) {
-        @include static-typography($category, $type);
-      }
-    } @else if ($type == "header-xl") {
+    } @else if ($type == "xl") {
       @include static-typography("heading", "l");
       @include breakpoint-from(laptop) {
         @include static-typography($category, $type);
       }
-    } @else if ($type == "header-l") {
+    } @else if ($type == "l") {
       @include static-typography("heading", "m");
+      @include breakpoint-from(laptop) {
+        @include static-typography($category, $type);
+      }
+    } @else if ($type == "m") {
+      @include static-typography("heading", "s");
       @include breakpoint-from(laptop) {
         @include static-typography($category, $type);
       }

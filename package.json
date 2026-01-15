@@ -4,11 +4,11 @@
   "version": "1.2.12",
   "type": "module",
   "scripts": {
-    "generate-variables": "node workflow/VariableGenereration/generateColors.cjs && node workflow/VariableGenereration/generateBoxShadows.cjs && node workflow/VariableGenereration/generateRadii.cjs && node workflow/VariableGenereration/generateSpacers.cjs && node workflow/VariableGenereration/generateSpacingUtilityClasses.cjs",
-    "dev": "npm run generate-variables && npm --prefix server run dev",
-    "build": "npm run generate-variables && npm --prefix server run build",
+    "build:tokens": "tsx scripts/build-tokens.ts",
+    "dev": "npm run build:tokens && npm --prefix server run dev",
+    "build": "npm run build:tokens && npm --prefix server run build",
     "preview": "npm --prefix server run preview",
-    "publish-all": "npm run generate-variables && npm publish && node ./workflow/DeploymentCDN/preprocessUtilityClasses.cjs && node ./workflow/DeploymentCDN/deployUtilityClassesToCDN.cjs",
+    "publish-all": "npm run build:tokens && npm publish && node ./workflow/DeploymentCDN/preprocessUtilityClasses.cjs && node ./workflow/DeploymentCDN/deployUtilityClassesToCDN.cjs",
     "process-utility-classes": "node ./workflow/DeploymentCDN/preprocessUtilityClasses.cjs",
     "deploy-utility-classes": "node ./workflow/DeploymentCDN/deployUtilityClassesToCDN.cjs"
   },
@@ -21,6 +21,8 @@
     "glob-promise": "^6.0.7",
     "lodash": "^4.17.21",
     "sass": "^1.64.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
     "uglifycss": "^0.0.29",
     "vite": "^4.4.5",
     "vue": "^3.5.0"

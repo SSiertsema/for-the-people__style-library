@@ -1,0 +1,62 @@
+{
+  "surface": {
+    "canvas": { "value": "{neutral.0}", "type": "color", "description": "Main page background" },
+    "panel": { "value": "{neutral.50}", "type": "color", "description": "Card/panel background" },
+    "elevated": { "value": "{neutral.0}", "type": "color", "description": "Elevated surface (modals)" },
+    "overlay": { "value": "rgba(0, 0, 0, 0.5)", "type": "color", "description": "Modal overlay backdrop" },
+    "muted": { "value": "{neutral.100}", "type": "color", "description": "Subtle background" },
+    "inverse": { "value": "{navy.900}", "type": "color", "description": "Dark surface for contrast" },
+    "accent": { "value": "{amber.100}", "type": "color", "description": "Warm accent surface for cards" }
+  },
+  "text": {
+    "default": { "value": "{neutral.900}", "type": "color", "description": "Primary text" },
+    "muted": { "value": "{neutral.600}", "type": "color", "description": "Secondary/helper text" },
+    "subtle": { "value": "{neutral.500}", "type": "color", "description": "Placeholder text" },
+    "inverse": { "value": "{neutral.0}", "type": "color", "description": "Text on dark backgrounds" },
+    "link": { "value": "{blue.600}", "type": "color", "description": "Link text" },
+    "linkHover": { "value": "{blue.700}", "type": "color", "description": "Link hover" },
+    "linkVisited": { "value": "{purple.600}", "type": "color", "description": "Visited link" },
+    "heading": { "value": "{navy.700}", "type": "color", "description": "Heading text" }
+  },
+  "border": {
+    "subtle": { "value": "{neutral.200}", "type": "color", "description": "Subtle borders" },
+    "default": { "value": "{neutral.300}", "type": "color", "description": "Default borders" },
+    "strong": { "value": "{neutral.500}", "type": "color", "description": "Emphasized borders" },
+    "focus": { "value": "{blue.500}", "type": "color", "description": "Focus ring color" }
+  },
+  "feedback": {
+    "success": { "value": "{green.600}", "type": "color", "description": "Success state" },
+    "successSubtle": { "value": "{green.50}", "type": "color", "description": "Success background" },
+    "successEmphasis": { "value": "{green.800}", "type": "color", "description": "Success text on light" },
+    "warning": { "value": "{amber.500}", "type": "color", "description": "Warning state" },
+    "warningSubtle": { "value": "{amber.50}", "type": "color", "description": "Warning background" },
+    "warningEmphasis": { "value": "{amber.800}", "type": "color", "description": "Warning text on light" },
+    "error": { "value": "{red.600}", "type": "color", "description": "Error state" },
+    "errorSubtle": { "value": "{red.50}", "type": "color", "description": "Error background" },
+    "errorEmphasis": { "value": "{red.800}", "type": "color", "description": "Error text on light" },
+    "info": { "value": "{blue.500}", "type": "color", "description": "Info state" },
+    "infoSubtle": { "value": "{blue.50}", "type": "color", "description": "Info background" },
+    "infoEmphasis": { "value": "{blue.800}", "type": "color", "description": "Info text on light" }
+  },
+  "intent": {
+    "action": {
+      "default": { "value": "{orange.500}", "type": "color", "description": "Primary CTA color" },
+      "hover": { "value": "{orange.600}", "type": "color", "description": "Primary CTA hover" },
+      "active": { "value": "{orange.700}", "type": "color", "description": "Primary CTA pressed" },
+      "disabled": { "value": "{neutral.400}", "type": "color", "description": "Disabled state" }
+    },
+    "secondary": {
+      "default": { "value": "{neutral.0}", "type": "color", "description": "Secondary action bg" },
+      "hover": { "value": "{neutral.50}", "type": "color", "description": "Secondary action hover" },
+      "border": { "value": "{navy.600}", "type": "color", "description": "Secondary action border" }
+    }
+  },
+  "focus": {
+    "ring": { "value": "{blue.500}", "type": "color", "description": "Focus ring color" }
+  },
+  "brand": {
+    "primary": { "value": "{navy.700}", "type": "color", "description": "Primary brand color" },
+    "secondary": { "value": "{orange.500}", "type": "color", "description": "Secondary brand color (CTA)" },
+    "accent": { "value": "{amber.400}", "type": "color", "description": "Accent brand color" }
+  }
+}

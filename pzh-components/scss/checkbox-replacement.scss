@@ -1,0 +1,65 @@
+@use "@pzh-temporary/style-library/src/scss/variables/colors.scss" as *;
+@use "@pzh-temporary/style-library/src/scss/variables/radii.scss" as *;
+
+@mixin checkbox-replacement($c, $size: "medium") {
+  $replacement-size: if($size == "small", 16px, 20px);
+  $icon-size: if($size == "small", 10px, 14px);
+
+  .#{$c}__input {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .#{$c}__replacement {
+    position: relative;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    width: $replacement-size;
+    height: $replacement-size;
+    border: 1px solid $color-neutral-600;
+    background-color: $color-neutral-white;
+    border-radius: $radius-4;
+  }
+
+  .#{$c}__checkmark {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    visibility: hidden;
+    color: $color-neutral-white;
+    font-size: $icon-size;
+  }
+
+  .#{$c}__input:focus-visible + .#{$c}__interactive-area .#{$c}__replacement {
+    border-color: $color-focus;
+    box-shadow: 0 0 0 1px $color-focus;
+  }
+
+  .#{$c}__input:hover + .#{$c}__interactive-area .#{$c}__replacement {
+    border-color: $color-primary-600;
+  }
+
+  .#{$c}__input:checked + .#{$c}__interactive-area .#{$c}__replacement {
+    border-color: $color-success-500;
+    background-color: $color-success-500;
+
+    .#{$c}__checkmark {
+      color: $color-neutral-white;
+      visibility: visible;
+    }
+  }
+
+  .#{$c}__input:disabled + .#{$c}__interactive-area,
+  .#{$c}__input:disabled:checked + .#{$c}__interactive-area {
+    cursor: not-allowed;
+    .#{$c}__replacement {
+      background-color: $color-neutral-200;
+      border-color: $color-neutral-600;
+    }
+    .#{$c}__checkmark {
+      color: $color-neutral-600;
+    }
+  }
+}

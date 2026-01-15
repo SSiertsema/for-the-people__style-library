@@ -1,0 +1,23 @@
+{
+  "name": "ftp-style-library-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "lucide-vue-next": "^0.562.0",
+    "nuxt": "^3.16.0",
+    "tippy.js": "^6.3.7",
+    "uuid": "^11.0.0",
+    "vue": "^3.5.13",
+    "vue-tippy": "^6.7.1"
+  },
+  "devDependencies": {
+    "sass": "^1.86.0"
+  }
+}

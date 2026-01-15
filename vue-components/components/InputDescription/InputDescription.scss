@@ -1,0 +1,7 @@
+@use "@pzh-temporary/style-library/src/scss/variables/spacers.scss" as *;
+@use "@pzh-temporary/style-library/src/scss/mixins/typography.scss" as *;
+
+.pzh-input-description {
+  margin: 0;
+  @include typography("text", "s");
+}

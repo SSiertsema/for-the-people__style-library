@@ -1,0 +1,20 @@
+@use"@pzh-temporary/style-library/src/scss/variables/colors.scss" as *;
+@use"@pzh-temporary/style-library/src/scss/variables/spacers.scss" as *;
+@use "@pzh-temporary/style-library/src/scss/variables/radii.scss" as *;
+@use"@pzh-temporary/style-library/src/scss/mixins/typography.scss" as *;
+
+@mixin input-box {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: $space-4;
+  padding-right: $space-4;
+  border: 1px solid $color-neutral-500;
+  border-radius: $radius-4;
+  background-color: $color-neutral-white;
+  @include typography("text", "s");
+
+  &:focus {
+    border-color: $color-primary-300;
+    outline: 0;
+  }
+}

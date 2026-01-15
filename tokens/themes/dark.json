@@ -1,0 +1,58 @@
+{
+  "$description": "Dark theme - deep navy backgrounds inspired by For People interface",
+  "surface": {
+    "canvas": { "value": "{navy.900}" },
+    "panel": { "value": "{navy.800}" },
+    "elevated": { "value": "{navy.700}" },
+    "muted": { "value": "{navy.800}" },
+    "inverse": { "value": "{neutral.100}" },
+    "accent": { "value": "{amber.700}" }
+  },
+  "text": {
+    "default": { "value": "{neutral.50}" },
+    "muted": { "value": "{neutral.400}" },
+    "subtle": { "value": "{neutral.500}" },
+    "inverse": { "value": "{navy.900}" },
+    "link": { "value": "{blue.400}" },
+    "linkHover": { "value": "{blue.300}" },
+    "linkVisited": { "value": "{purple.400}" },
+    "heading": { "value": "{neutral.0}" }
+  },
+  "border": {
+    "subtle": { "value": "{navy.700}" },
+    "default": { "value": "{navy.600}" },
+    "strong": { "value": "{navy.400}" },
+    "focus": { "value": "{blue.400}" }
+  },
+  "feedback": {
+    "successSubtle": { "value": "{green.900}" },
+    "successEmphasis": { "value": "{green.300}" },
+    "warningSubtle": { "value": "{amber.900}" },
+    "warningEmphasis": { "value": "{amber.300}" },
+    "errorSubtle": { "value": "{red.900}" },
+    "errorEmphasis": { "value": "{red.300}" },
+    "infoSubtle": { "value": "{blue.900}" },
+    "infoEmphasis": { "value": "{blue.300}" }
+  },
+  "intent": {
+    "action": {
+      "default": { "value": "{orange.500}" },
+      "hover": { "value": "{orange.400}" },
+      "active": { "value": "{orange.300}" },
+      "disabled": { "value": "{neutral.600}" }
+    },
+    "secondary": {
+      "default": { "value": "{navy.800}" },
+      "hover": { "value": "{navy.700}" },
+      "border": { "value": "{orange.500}" }
+    }
+  },
+  "focus": {
+    "ring": { "value": "{blue.400}" }
+  },
+  "brand": {
+    "primary": { "value": "{navy.400}" },
+    "secondary": { "value": "{orange.500}" },
+    "accent": { "value": "{amber.400}" }
+  }
+}

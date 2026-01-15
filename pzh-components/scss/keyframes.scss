@@ -1,0 +1,128 @@
+@use "@pzh-temporary/style-library/src/scss/variables/colors.scss" as *;
+@use "@pzh-temporary/style-library/src/scss/variables/radii.scss" as *;
+
+@keyframes focusring-pulse {
+  0% {
+    box-shadow: 0 0 0 2px rgba($color-focus, 0.2);
+  }
+
+  20% {
+    box-shadow: 0 0 0 2px rgba($color-focus, 1);
+  }
+
+  80% {
+    box-shadow: 0 0 0 2px rgba($color-focus, 1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 2px rgba($color-focus, 0.2);
+  }
+}
+
+@keyframes focusring--space-around {
+  0% {
+    box-shadow:
+      0 0 0 4px white,
+      0 0 0 6px rgba($color-focus, 0.2);
+  }
+
+  20% {
+    box-shadow:
+      0 0 0 4px white,
+      0 0 0 6px rgba($color-focus, 1);
+  }
+
+  80% {
+    box-shadow:
+      0 0 0 4px white,
+      0 0 0 6px rgba($color-focus, 1);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 4px white,
+      0 0 0 6px rgba($color-focus, 0.2);
+  }
+}
+
+@keyframes button-focusring-pulse {
+  0% {
+    box-shadow:
+      0 0 0 2px white,
+      0 0 0 4px rgba($color-focus, 0.2);
+  }
+
+  20% {
+    box-shadow:
+      0 0 0 2px white,
+      0 0 0 4px rgba($color-focus, 1);
+  }
+
+  80% {
+    box-shadow:
+      0 0 0 2px white,
+      0 0 0 4px rgba($color-focus, 1);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 2px white,
+      0 0 0 4px rgba($color-focus, 0.2);
+  }
+}
+
+@mixin focus-ring-animation() {
+  animation-name: focusring-pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@mixin apply-focus-ring($enableBorderRadius: false, $enableSpaceAround: false) {
+  @if ($enableBorderRadius == true) {
+    border-radius: 2px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    @if ($enableSpaceAround == true) {
+      animation-name: focusring--space-around;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    } @else {
+      animation-name: focus-ring-animation;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+@mixin focus-ring($enableBorderRadius: false) {
+  @if ($enableBorderRadius == true) {
+    border-radius: 2px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    @include focus-ring-animation;
+    z-index: 1;
+  }
+}
+
+@mixin apply-button-focus-ring() {
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    animation-name: button-focusring-pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,86 @@
+@use "@pzh-temporary/style-library/src/scss/mixins/typography.scss" as *;
+@use "@pzh-temporary/style-library/src/scss/variables/radii.scss" as *;
+@use "@pzh-temporary/style-library/src/scss/variables/spacers.scss" as *;
+@use "@pzh-temporary/style-library/src/scss/variables/colors.scss" as *;
+@use "./keyframes.scss" as *;
+
+@mixin baseAndModifiers($class) {
+  @include base($class);
+  @include modifierSizeSmall("#{$class}--size-small");
+  @include modifierIconOnly("#{$class}--icon-only");
+  @include modifierIconOnlySizeSmall(
+    "#{$class}--icon-only#{$class}--size-small"
+  );
+}
+
+@mixin base($selector) {
+  #{$selector} {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 48px;
+    line-height: 48px !important;
+    gap: $space-3;
+    border-radius: $radius-4;
+    padding-left: $space-4;
+    padding-right: $space-4;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+
+    @include typography("heading", "s");
+
+    & {
+      @include apply-button-focus-ring;
+    }
+
+    > i {
+      font-size: 18px;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active {
+      background-color: $color-neutral-200;
+      border-color: $color-neutral-200;
+      color: $color-neutral-600;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@mixin modifierSizeSmall($selector) {
+  #{$selector} {
+    height: 40px;
+    line-height: 40px !important;
+    padding-left: $space-4;
+    padding-right: $space-4;
+    gap: $space-2;
+    @include typography("text", "s");
+
+    > i {
+      font-size: 14px;
+    }
+  }
+}
+
+@mixin modifierIconOnly($selector) {
+  #{$selector} {
+    width: 48px;
+    position: relative;
+    > i {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
+}
+
+@mixin modifierIconOnlySizeSmall($selector) {
+  #{$selector} {
+    width: 40px;
+  }
+}

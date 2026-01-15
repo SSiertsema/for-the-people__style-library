@@ -1,0 +1,13 @@
+@use "@pzh-temporary/style-library/src/scss/variables/spacers.scss" as *;
+@use "@pzh-temporary/style-library/src/scss/variables/radii.scss" as *;
+@use "@pzh-temporary/style-library/src/scss/mixins/levitation.scss" as *;
+@use "@pzh-temporary/style-library/src/scss/variables/colors.scss" as *;
+
+@mixin flyout-box {
+  display: block;
+  box-sizing: border-box;
+  padding: $space-5 $space-4;
+  @include levitate(1);
+  border-radius: $radius-4;
+  background-color: $color-neutral-white;
+}

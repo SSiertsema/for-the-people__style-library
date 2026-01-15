@@ -1,0 +1,190 @@
+import { Meta, Story } from "@storybook/blocks";
+import * as Stories from "./Map.stories.js";
+import Map from "./Map.vue";
+
+<Meta
+  of={Stories}
+  title="Documentatie Leaflet Map"
+  Name="Documentatie Leaflet Map"
+/>
+
+# 🗺️ Leaflet Map
+
+Het Map component is een uitbreidbare en herbruikbare Vue 3-component gebaseerd op Leaflet.
+Dit component ondersteunt een breed scala aan kaartlagen en interactiviteit, en is bedoeld voor het visueel
+presenteren van geografische data in moderne webapplicaties.
+
+## 📦 Implementatie
+
+Voor het gebruik van dit component is het belangrijk om **Leaflet** en **Proj4Leaflet** te importeren in het project naar keuze.  
+Het component verwacht dat **Leaflet** als prop wordt meegegeven, om conflicten tussen meerdere versies te voorkomen.
+
+---
+
+## 🧩 Laagselectie en weergavelogica
+
+Een laag kan worden voorzien van de boolean **`isMultiselectable`** om aan te geven hoe deze zich gedraagt in de legenda:
+
+- Als **`isMultiselectable: true`**, wordt de laag weergegeven als een **checkbox**, en kunnen meerdere lagen tegelijkertijd worden geactiveerd.
+- Als **`isMultiselectable: false`**, wordt de laag weergegeven als een **radio button**, waarbij slechts één van deze lagen tegelijk actief kan zijn.
+- De default value is true.
+- Deze aanpak voorkomt performanceproblemen bij het renderen van zware lagen, terwijl je gebruikers toch de mogelijkheid biedt om relevante lagen flexibel te combineren.
+
+---
+
+## 🎯 Laagfocus en zoomgedrag
+
+Een laag kan worden voorzien van een **`focusLayer`** met een **Number** als waarde om aan te geven of de kaart automatisch moet inzoomen op deze laag **tijdens het initialiseren van de kaart**.
+
+- De focus werkt alleen als de laag ook **`active: true`** is. Inactieve lagen worden genegeerd bij het bepalen van de focus.
+- Wanneer **`focusLayer`** aanwezig is, wordt de **bounding box (bounds)** van de laag berekend en vergroot met een paddingwaarde via `.pad(...)`, waarna de kaart automatisch wordt ingezoomd op dat gebied.
+- De `focusLayer` property wordt voorzien van een getal. Dit getal bepaald hoeveel padding er is. Dit is een procentuele waarde.
+- Een waarde van **0 kan als standaard** worden opgegeven. Houd er rekening mee dat waardes **onder 0.5 mogelijk voor problemen kunnen zorgen**, afhankelijk van de kaartlaag en de grootte van het object waarop wordt ingezoomd.
+- Deze aanpak zorgt ervoor dat gebruikers direct het relevante gebied in beeld krijgen bij het openen van de kaart.
+- ⚠️ Hoewel het technisch mogelijk is om meerdere lagen met een **`focusLayer` configuratie** op te geven, wordt er **slechts één** daadwerkelijk gebruikt bij het initialiseren. Meerdere focus-lagen worden dus niet ondersteund in de huidige implementatie.
+
+---
+
+## 🌍 Ondersteuning voor WFS en WMS
+
+Je kunt eenvoudig **WFS** (_Web Feature Service_) en **WMS** (_Web Map Service_) lagen toevoegen via de **layers**-property.
+
+- Voor **WMS** of **image layers** hoef je enkel een **URL** en een **layer-naam** op te geven.
+- **WFS-data** kan worden gecombineerd met **popups**, **interactieve events** en **custom styling**.
+
+---
+
+## 🎨 WFS lagen personalizeren
+
+Door gebruik te maken van de style-property bij het configureren van een laag, kun je een **WFS**- of **GeoJSON**-layer voorzien van een **custom stijl**.
+
+- Ondersteunt dynamische stijlen per feature op basis van properties in de data.
+- Ondersteunt simpele style propertie om alle features dezelfde style te geven.
+- Hover- en selectiestijlen kunnen afzonderlijk worden ingesteld via de **interactiveOptions**-configuratie.
+- Label per feature op basis van de **labelKey** property in de **interactiveOptions**. Hiermee wordt een atribuut van de features in het ceter gebonden als een popup. Voor informatieve purppose.
+
+---
+
+## 🎨 WMS lagen personalizeren
+
+Door gebruik te maken van de ingebouwde filters en options kun je een **WMS**- of **image layer** personalizeren.
+
+- Filters toepassen om maar een gedeelte van een laag te ontvangen.
+- Options toepassen om nog meer configuratie toe te voegen aan de layerOptions
+
+---
+
+## 🏷️ Label per feature (tooltip) voor wfs lagen
+
+Er kan per feature een label worden weergegeven op de kaart, gebaseerd op de property opgegeven via **interactiveOptions.labelKey**.
+Dit label wordt als een permanente tooltip in het midden van het feature weergegeven, en is bedoeld voor informatieve doeleinden.
+Het is echter wel mogelijk om gebruik te maken van **interactiveOptions.labelZoomThreshold**. Hiermee wordt het mogelijk om de labels pas vanaf een bepaald zoom niveau te tonen.
+
+Momenteel is het niet mogelijk om de stijl van dit label dynamisch aan te passen via de configuratie. De opmaak is vastgelegd via een globale CSS-klasse en geldt voor alle labels.
+
+---
+
+## 💬 Custom Popups per feature voor wfs lagen
+
+- Ondersteunt zowel standaard als **custom popups** op basis van **Vue componenten**.
+- Popups kunnen worden ingesteld per **laag** of per individuele **feature**.
+- De content die in de popups verschijnt kan worden gedefinieerd via **popupConfig.contentKeys**.
+
+## Voorbeelden layers configuratie
+
+```js
+layers: {
+    wfsCustomColorsByKey: {
+    isActive: false,
+    isMultiSelectable: true,
+    type: "geojson",
+    data: geoJsonDataObject,
+    interactiveOptions: {
+      labelKey: "Waterschap",
+      customFeatureStyle: {
+        key: "Waterschap",
+        colorConfig: {
+          "Hoogheemraadschap van Rijnland": {
+            fillColor: "#F1DB7E33",
+            color: "#281F6B",
+          },
+          "Hoogheemraadschap van Delfland": {
+            fillColor: "#EB708533",
+            color: "#281F6B",
+          },
+          "Hoogheemraadschap van Schieland en de Krimpenerwaard": {
+            fillColor: "#76BC2133",
+            color: "#281F6B",
+          },
+          "Waterschap Hollandse Delta": {
+            fillColor: "#7BADDE33",
+            color: "#281F6B",
+          },
+          "Hoogheemraadschap De Stichtse Rijnlanden": {
+            fillColor: "#D11F3D33",
+            color: "#281F6B",
+          },
+        },
+      },
+    },
+  },
+  wmsLayer: {
+    active: true,
+    isMultiSelectable: true,
+    type: "image",
+    url: "https://geodata.zuid-holland.nl/geoserver/grenzen/wms",
+    layer: "ZHPLG_KERNGEBIEDEN",
+  },
+  wfsLayerCustomPopup: {
+    active: true,
+    focusLayer: 0.8,
+    isMultiSelectable: false,
+    type: "geojson",
+    data: geoJsonDataObject
+    interactiveOptions: {
+      hover: true,
+      popupConfig: {
+        isCustom: true,
+        template: CustomPopup,
+        contentKeys: ["name", "description"],
+      },
+      style: {
+        fillColor: "green",
+        weight: 4,
+      },
+    },
+    style: {
+      fillColor: "orange",
+      color: "yellow",
+      weight: 2,
+    },
+  },
+  wfsLayerDefaultPopup: {
+    active: false,
+    isMultiSelectable: false,
+    type: "geojson",
+    data: geoJsonDataObject
+    interactiveOptions: {
+      hover: true,
+      popupConfig: {
+        isCustom: false,
+        content: (feature) =>
+          `<b>${feature.properties.name}</b><br /><br /> ${feature.properties.description ?? "Geen beschrijving beschikbaar"}`,
+      },
+      style: {
+        fillColor: "green",
+        weight: 4,
+      },
+    },
+    style: {
+      fillColor: "blue",
+      weight: 1,
+      color: "turquoise",
+    },
+  },
+}
+```
+
+<Story>
+  <Map />
+</Story>

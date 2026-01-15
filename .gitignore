@@ -1,6 +1,12 @@
 node_modules
 dest
+dist
 src/assets/scss/variables
 .env
 .env.*
 !.env.example
+
+# Nuxt build outputs
+server/.nuxt
+server/.output
+server/node_modules

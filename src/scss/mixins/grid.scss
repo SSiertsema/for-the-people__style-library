@@ -1,20 +1,20 @@
 @use "./breakpoint.scss" as *;
 @use "./container.scss" as *;
-@use "../variables/spacers.scss" as *;
+@use "../../dist/scss/tokens" as *;
 
 @mixin grid() {
   display: grid;
-  gap: $space-6;
+  gap: $inline-l;
   grid-template-columns: 1fr;
 
   @include breakpoint-from(tablet) {
     grid-template-columns: repeat(4, 1fr);
-    gap: $space-10;
+    gap: $inline-xl;
   }
 
   @include breakpoint-from(laptop) {
     grid-template-columns: repeat(6, 1fr);
-    gap: $space-12;
+    gap: $inline-2xl;
   }
 
   @include breakpoint-from(laptop) {

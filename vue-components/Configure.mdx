@@ -1,0 +1,100 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Vue Componenten bibliotheek" />
+
+# Vue Componenten bibliotheek
+
+## Wat is dit?
+
+Deze componenten bibliotheek is een set aan herbruikbare digitale bouwstenen met een vaste structuur en een bijbehorende vormgeving.
+De bouwstenen omvatten geen interacties en logica.
+
+Deze omgeving maakt inzichtelijk welke bouwstenen we hebben, waarom het bestaat, hoe en wanneer het gebruikt kan worden.
+
+## Waarom bestaat dit?
+
+We merken dat in deze complexe organisatie talloze websites en webapplicaties zijn ontstaan. Veel van deze zijn vanaf de grond af opgebouwd. _Opnieuw_ gedesigned, _Opnieuw_ geprogrammeerd. Design keuzes gemaakt die afwijken van de huisstijl.
+Het gevaar zit in het woord **Opnieuw**. Opnieuw betekent geld, tijd, verlies in beheersbaarheid en vaak ook in uniformiteit. Daarnaast vinden er veel discussies plaats over vormgeving. Als dit niet meer nodig is dan kan er gediscussierd worden over functionaliteit en bedrijfslogica. Veel effectiever! Kortere meetings met meer focus.
+
+Voordelen op een rijtje:
+
+- Geeft inzicht
+- Bevorderd Transparantie
+- Bevorderd Herbruikbaarheid
+- Bevorderd Uniformiteit
+- Bevorderd Accessibility en houdt dit in stand
+- Bevorderd Beheersbaarheid
+- Garandeert Kwaliteit (d.m.v. automatische tests)
+- Verplaatst discussies van vormgeving naar functionaliteit en bedrijfslogica.
+
+## Input voor deze bibliotheek
+
+De input voor deze bibliotheek is het [Design System](https://www.figma.com/file/11ZuN25dSOqx3w1ie9Avbz/Design-System---Provincie-Zuid-Holland?type=design&node-id=0-1&mode=design&t=QcNAIJsbMhtMMUQQ-0). Dit is een systeem waar het design team design elementen heeft genormaliseerd. Het systeem is gemaakt in [Figma](https://help.figma.com/hc/en-us/articles/14563969806359-What-is-Figma-#:~:text=Figma's%20mission%20is%20to%20make,other%20digital%20products%20and%20experiences.). Net als deze library is het een incrementeel product. Een product die altijd zal evolueren. Dit doen we in projectvorm. Hier staat de [backlog](https://pzh-nl.visualstudio.com/Design%20System%20Architectuur/_backlogs/backlog/Design%20System%20Architecture%20Team/Features) centraal.
+
+## Output
+
+#### Toegankelijke omgeving waar we:
+
+- Inzichtelijk maken welke componenten we hebben
+- Communiceren waarom een component bestaat (Rationale)
+- Communiceren wanneer het component gebruikt dient te worden (Richtlijnen)
+- Communiceren hoe de library gebruikt kan worden (Techniek)
+- Communiceren hoe een component geimplementeerd kan worden (Techniek)
+
+#### CSS library
+
+Deze [CSS library](https://cdn-pzh.azureedge.net/web/pzh-html-component-library/0.0.8/css/components/all.css) wordt beschikbaar gesteld op het CDN (Content delivery network) van Provincie Zuid-Holland.
+
+#### SCSS variabelen en Mixins
+
+We hebben een [NPM omgeving](https://www.npmjs.com/package/@pzh-temporary/pzh-html-component-library) waar we SCSS variabelen en Mixins opslaan. Deze kunnen vanuit andere applicaties gebruikt worden als bronbestanden.
+
+## Nice! Hoe kan ik er gebruik van maken?
+
+Jazeker! Op verschillende manieren
+
+### Inladen CSS van CDN
+
+1. Inladen CSS in je website
+2. HTML kopieren uit component documentatie
+
+```html
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample PZH CSS library usage</title>
+    <link rel="stylesheet" href="https://cdn-pzh.azureedge.net/web/pzh-html-component-library/0.0.8/css/components/all.css"></link>
+</head>
+<body>
+    <button class="button-primary button-primary--size-medium">
+        <span>Button Primary</span>
+      </button>
+</body>
+</html>
+```
+
+**Let op:** Houd er rekening mee dat je applicatie beveiligd kan zijn met een CSP (Content security policy). In dat geval kan het mogelijk zijn dat de applicatie het CSS bestand niet in mag laden.
+
+### Gebruik maken van SCSS library
+
+We stellen SCSS variabelen en Mixins beschikbaar via NPM package @pzh-temporary/html-componenten-library.
+
+1. Vanuit een npm applicatie command line:
+
+```JS
+npm i -D @pzh-temporary/html-componenten-library
+```
+
+2.
+
+1. Npm install @pzh-temporary/html-componenten-library
+1. Import '@pzh-temporary/html-componenten-library/ButtonPrimary.scss'
+1. HTML kopieren uit component documentatie
+
+## Referenties
+
+- [Front-end Architectuur](https://pzh-nl.visualstudio.com/Design%20System%20Architectuur/_wiki/wikis/Design-system.wiki/1449/Design-System-Digital-Pattern-Architecture)
+- [Design System](https://www.figma.com/file/11ZuN25dSOqx3w1ie9Avbz/Design-System---Provincie-Zuid-Holland?type=design&node-id=0-1&mode=design&t=QcNAIJsbMhtMMUQQ-0)
+- [Repository]()
+- [Backlog]()
