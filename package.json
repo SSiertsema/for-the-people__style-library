@@ -6,7 +6,7 @@
   "scripts": {
     "build:tokens": "tsx scripts/build-tokens.ts",
     "dev": "npm run build:tokens && npm --prefix server run dev",
-    "build": "npm run build:tokens && npm --prefix server run build",
+    "build": "npm run build:tokens && npm --prefix server install && npm --prefix server run build",
     "preview": "npm --prefix server run preview",
     "publish-all": "npm run build:tokens && npm publish && node ./workflow/DeploymentCDN/preprocessUtilityClasses.cjs && node ./workflow/DeploymentCDN/deployUtilityClassesToCDN.cjs",
     "process-utility-classes": "node ./workflow/DeploymentCDN/preprocessUtilityClasses.cjs",
