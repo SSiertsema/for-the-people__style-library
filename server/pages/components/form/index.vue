@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CheckSquare, Circle, ChevronDown, Hash, ToggleLeft, SlidersHorizontal, Group, SquarePlus, Type, TableRows } from 'lucide-vue-next'
+import { CheckSquare, Circle, ChevronDown, Hash, ToggleLeft, SlidersHorizontal, Group, SquarePlus, Type, Rows3 } from 'lucide-vue-next'
 
 const formComponents = [
   { name: 'Checkbox', path: '/components/form/checkbox', icon: CheckSquare, description: 'Boolean selection' },
@@ -11,7 +11,7 @@ const formComponents = [
   { name: 'InputGroup', path: '/components/form/input-group', icon: Group, description: 'Group inputs with addons' },
   { name: 'InputGroupAddon', path: '/components/form/input-group-addon', icon: SquarePlus, description: 'Addon for InputGroup' },
   { name: 'InputIcon', path: '/components/form/input-icon', icon: Type, description: 'Icon wrapper for inputs' },
-  { name: 'Row', path: '/components/form/row', icon: TableRows, description: 'Row template for tables' }
+  { name: 'Row', path: '/components/form/row', icon: Rows3, description: 'Row template for tables' }
 ]
 </script>
 

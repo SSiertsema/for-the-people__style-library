@@ -127,7 +127,7 @@ $c: confirm-dialog;
   }
 
   &:active {
-    background-color: var(--surface-hover, $surface-hover);
+    background-color: var(--surface-muted, $surface-muted);
   }
 }
 
