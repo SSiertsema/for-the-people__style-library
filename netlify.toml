@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build:tokens && cd server && npm install && npm run build && echo '=== Checking output locations ===' && ls -la . && ls -la .output/ 2>/dev/null || echo 'No .output' && ls -la ../.netlify/ 2>/dev/null || echo 'No .netlify'"
-  publish = "server/.output/public"
+  command = "npm run build:tokens && cd server && npm install && npm run build"
+  publish = "server/dist"
 
 [build.environment]
   NODE_VERSION = "20"
