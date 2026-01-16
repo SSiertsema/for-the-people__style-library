@@ -1,4 +1,7 @@
 <script setup lang="ts">
+// Background
+import AtmosphericBackground from '@components/AtmosphericBackground/AtmosphericBackground.vue'
+
 // Button
 import Button from '@components/Button/Button.vue'
 import '@components/Button/Button.scss'
@@ -98,8 +101,9 @@ const stepsItems = [
 </script>
 
 <template>
-  <div class="kitchen-sink">
-    <header class="page-header">
+  <AtmosphericBackground variant="default" :parallax="true" class="kitchen-sink-bg">
+    <div class="kitchen-sink">
+      <header class="page-header">
       <h1>Kitchen Sink</h1>
       <p>All components rendered in their various states for quick visual inspection.</p>
     </header>
@@ -766,10 +770,15 @@ const stepsItems = [
         </div>
       </div>
     </section>
-  </div>
+    </div>
+  </AtmosphericBackground>
 </template>
 
 <style lang="scss" scoped>
+.kitchen-sink-bg {
+  min-height: 100vh;
+}
+
 .kitchen-sink {
   padding: var(--doc-space-xl);
   max-width: 1400px;

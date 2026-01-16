@@ -183,6 +183,12 @@ const navigation = [
       { path: '/components/tag', label: 'Tag' },
       { path: '/components/terminal', label: 'Terminal' }
     ]
+  },
+  {
+    label: 'Surfaces',
+    children: [
+      { path: '/components/atmospheric-background', label: 'AtmosphericBackground' }
+    ]
   }
 ]
 
