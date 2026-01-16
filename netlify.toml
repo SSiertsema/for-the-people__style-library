@@ -1,5 +1,5 @@
 [build]
-  command = "echo '=== Starting build ===' && npm run build:tokens && echo '=== Tokens built ===' && cd server && npm install && echo '=== Server deps installed ===' && npm run build && echo '=== Build complete ===' && ls -la .output/"
+  command = "npm run build:tokens && cd server && npm install && npm run build && echo '=== Checking output locations ===' && ls -la . && ls -la .output/ 2>/dev/null || echo 'No .output' && ls -la ../.netlify/ 2>/dev/null || echo 'No .netlify'"
   publish = "server/.output/public"
 
 [build.environment]
