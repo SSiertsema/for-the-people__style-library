@@ -38,8 +38,8 @@ $c: meter-group;
 }
 
 .#{$c}__label-value {
-  font-size: var(--meter-group-value-fontSize, $meter-group-value-fontSize);
-  color: var(--meter-group-value-color, $meter-group-value-color);
+  font-size: var(--meter-group-valueText-fontSize, $meter-group-valueText-fontSize);
+  color: var(--meter-group-valueText-color, $meter-group-valueText-color);
 }
 
 .#{$c}__track {
