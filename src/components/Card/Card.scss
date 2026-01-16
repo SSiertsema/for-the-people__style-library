@@ -10,6 +10,16 @@ $c: card;
   overflow: hidden;
 }
 
+// Highlighted variant with vibrant gradient border and glow
+.#{$c}--highlighted {
+  position: relative;
+  border: none;
+  background: linear-gradient(var(--card-background, $card-background), var(--card-background, $card-background)) padding-box,
+              linear-gradient(135deg, var(--card-highlighted-border-start, $card-highlighted-border-start), var(--card-highlighted-border-end, $card-highlighted-border-end)) border-box;
+  border: var(--card-highlighted-border-width, $card-highlighted-border-width) solid transparent;
+  box-shadow: var(--card-highlighted-glow, $card-highlighted-glow);
+}
+
 .#{$c}__header {
   padding: var(--card-header-padding, $card-header-padding);
   border-bottom: var(--card-header-borderWidth, $card-header-borderWidth) solid var(--card-header-borderColor, $card-header-borderColor);

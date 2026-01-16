@@ -1,4 +1,5 @@
 @use "../../../dist/scss/tokens" as *;
+@use "../../scss/mixins/accent-gradient.scss" as *;
 
 $c: checkbox;
 
@@ -60,8 +61,8 @@ $c: checkbox;
 .#{$c}--checked,
 .#{$c}--indeterminate {
   .#{$c}__box {
-    background-color: var(--checkbox-background-checked, $checkbox-background-checked);
-    border-color: var(--checkbox-background-checked, $checkbox-background-checked);
+    @include accent-gradient();
+    border-color: var(--accent-gradient-start, $accent-gradient-start);
   }
 
   .#{$c}__icon {

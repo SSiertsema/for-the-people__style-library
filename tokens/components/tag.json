@@ -45,40 +45,60 @@
       "description": "Icon size inside tag"
     },
     "background": {
-      "primary": {
-        "value": "{brand.primary}",
+      "brand": {
+        "value": "{orange.500}",
         "type": "color",
-        "description": "Primary tag background"
+        "description": "Brand color tag"
+      },
+      "accent": {
+        "value": "{amber.500}",
+        "type": "color",
+        "description": "Accent color tag"
+      },
+      "neutral": {
+        "value": "rgba(255, 255, 255, 0.12)",
+        "type": "color",
+        "description": "Neutral/muted tag"
       },
       "success": {
         "value": "{feedback.success}",
         "type": "color",
-        "description": "Success tag background"
+        "description": "Success status tag"
       },
       "warning": {
         "value": "{feedback.warning}",
         "type": "color",
-        "description": "Warning tag background"
+        "description": "Warning status tag"
       },
       "danger": {
         "value": "{feedback.error}",
         "type": "color",
-        "description": "Danger tag background"
+        "description": "Danger/error status tag"
       },
       "info": {
         "value": "{feedback.info}",
         "type": "color",
-        "description": "Info tag background"
+        "description": "Info status tag"
       }
     },
     "text": {
-      "primary": {
-        "value": "{text.inverse}",
+      "brand": {
+        "value": "{neutral.0}",
         "type": "color",
-        "description": "Text on primary background"
+        "description": "Text on brand background"
+      },
+      "accent": {
+        "value": "{neutral.900}",
+        "type": "color",
+        "description": "Text on accent background (dark for contrast)"
+      },
+      "neutral": {
+        "value": "{text.default}",
+        "type": "color",
+        "description": "Text on neutral background"
       },
       "success": {
-        "value": "{text.inverse}",
+        "value": "{neutral.0}",
         "type": "color",
         "description": "Text on success background"
       },
@@ -88,12 +108,12 @@
         "description": "Text on warning background (dark for contrast)"
       },
       "danger": {
-        "value": "{text.inverse}",
+        "value": "{neutral.0}",
         "type": "color",
         "description": "Text on danger background"
       },
       "info": {
-        "value": "{text.inverse}",
+        "value": "{neutral.0}",
         "type": "color",
         "description": "Text on info background"
       }

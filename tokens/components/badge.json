@@ -2,9 +2,9 @@
   "badge": {
     "background": {
       "primary": {
-        "value": "{brand.primary}",
+        "value": "{orange.500}",
         "type": "color",
-        "description": "Primary badge background"
+        "description": "Primary badge background - visible accent color"
       },
       "success": {
         "value": "{feedback.success}",
@@ -29,9 +29,9 @@
     },
     "text": {
       "primary": {
-        "value": "{text.inverse}",
+        "value": "{neutral.0}",
         "type": "color",
-        "description": "Text on primary badge"
+        "description": "Text on primary badge - white"
       },
       "success": {
         "value": "{text.inverse}",

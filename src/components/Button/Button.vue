@@ -66,6 +66,10 @@ const props = defineProps({
     default: "primary",
     validator: (v) => ["primary", "secondary", "outlined", "text"].includes(v),
   },
+  pill: {
+    type: Boolean,
+    default: false,
+  },
   isDisabled: {
     type: Boolean,
     default: false,
@@ -80,6 +84,7 @@ const additionalClasses = computed(() =>
   [
     `button--size-${props.size}`,
     `button--variant-${props.variant}`,
+    props.pill && "button--pill",
     props.isDisabled && "button--disabled",
     props.isLoading && "button--loading",
   ]

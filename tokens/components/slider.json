@@ -7,16 +7,19 @@
       },
       "background": {
         "default": {
-          "value": "{neutral.200}",
-          "type": "color"
+          "value": "rgba(255, 255, 255, 0.15)",
+          "type": "color",
+          "description": "Inactive track - semi-transparent white works on any dark background"
         },
         "fill": {
-          "value": "{brand.primary}",
-          "type": "color"
+          "value": "{orange.500}",
+          "type": "color",
+          "description": "Active/filled track - visible accent color"
         },
         "disabled": {
-          "value": "{neutral.100}",
-          "type": "color"
+          "value": "rgba(255, 255, 255, 0.08)",
+          "type": "color",
+          "description": "Disabled track - subtle semi-transparent"
         }
       },
       "radius": {
@@ -31,30 +34,33 @@
       },
       "background": {
         "default": {
-          "value": "{brand.primary}",
-          "type": "color"
+          "value": "{orange.500}",
+          "type": "color",
+          "description": "Thumb - visible accent color"
         },
         "hover": {
-          "value": "{navy.700}",
-          "type": "color"
+          "value": "{orange.400}",
+          "type": "color",
+          "description": "Thumb hover - lighter accent"
         },
         "disabled": {
-          "value": "{neutral.300}",
-          "type": "color"
+          "value": "rgba(255, 255, 255, 0.25)",
+          "type": "color",
+          "description": "Disabled thumb - semi-transparent"
         }
       },
       "border": {
         "width": {
-          "value": "2px",
+          "value": "0px",
           "type": "dimension"
         },
         "color": {
-          "value": "{neutral.0}",
+          "value": "transparent",
           "type": "color"
         }
       },
       "shadow": {
-        "value": "0 2px 4px rgba(0, 0, 0, 0.15)",
+        "value": "0 2px 4px rgba(0, 0, 0, 0.3)",
         "type": "shadow"
       }
     },
@@ -64,7 +70,7 @@
         "type": "dimension"
       },
       "ringColor": {
-        "value": "{brand.primary}",
+        "value": "{orange.500}",
         "type": "color"
       },
       "ringOffset": {

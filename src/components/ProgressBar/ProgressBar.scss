@@ -1,4 +1,5 @@
 @use "../../../dist/scss/tokens" as *;
+@use "../../scss/mixins/accent-gradient.scss" as *;
 
 $c: progress-bar;
 
@@ -18,7 +19,7 @@ $c: progress-bar;
 
 .#{$c}__fill {
   height: 100%;
-  background-color: var(--progress-bar-fill-background, $progress-bar-fill-background);
+  @include accent-gradient($angle: 90deg);
   border-radius: var(--progress-bar-track-radius, $progress-bar-track-radius);
   display: flex;
   align-items: center;
@@ -31,6 +32,7 @@ $c: progress-bar;
   position: absolute;
   top: 0;
   left: 0;
+  @include accent-gradient($angle: 90deg);
   animation: progress-bar-indeterminate 1.5s infinite ease-in-out;
   transform-origin: left center;
 }

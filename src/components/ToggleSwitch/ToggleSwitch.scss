@@ -1,4 +1,5 @@
 @use "../../../dist/scss/tokens" as *;
+@use "../../scss/mixins/accent-gradient.scss" as *;
 
 $c: toggle-switch;
 
@@ -49,7 +50,7 @@ $c: toggle-switch;
 // Checked state
 .#{$c}--checked {
   .#{$c}__track {
-    background-color: var(--toggleSwitch-track-background-on, $toggleSwitch-track-background-on);
+    @include accent-gradient($angle: 90deg);
   }
 
   .#{$c}__thumb {

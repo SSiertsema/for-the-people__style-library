@@ -19,10 +19,10 @@ const props = defineProps({
     type: String,
     default: null,
   },
-  severity: {
+  color: {
     type: String,
-    default: "primary",
-    validator: (v) => ["primary", "success", "warning", "danger", "info"].includes(v),
+    default: "neutral",
+    validator: (v) => ["brand", "accent", "neutral", "success", "warning", "danger", "info"].includes(v),
   },
   icon: {
     type: String,
@@ -38,7 +38,7 @@ const $slots = useSlots();
 
 const additionalClasses = computed(() =>
   [
-    `tag--severity-${props.severity}`,
+    `tag--color-${props.color}`,
     props.rounded ? "tag--rounded" : "",
   ]
     .filter(Boolean)

@@ -1,4 +1,5 @@
 @use "../../../dist/scss/tokens" as *;
+@use "../../scss/mixins/accent-gradient.scss" as *;
 
 $c: badge;
 
@@ -57,8 +58,9 @@ $c: badge;
 
 // Severities
 .#{$c}--severity-primary {
-  background-color: var(--badge-background-primary, $badge-background-primary);
+  @include accent-gradient();
   color: var(--badge-text-primary, $badge-text-primary);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
 .#{$c}--severity-success {

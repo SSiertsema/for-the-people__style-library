@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" :class="additionalClasses">
     <div v-if="$slots.header" class="card__header">
       <slot name="header" />
     </div>
@@ -27,10 +27,25 @@
 <style src="./Card.scss"></style>
 
 <script setup>
-// Card component - a container for content with optional header, title, subtitle, content, and footer sections
-// Following the PrimeVue Card API pattern with slots for flexible content
+import { computed } from "vue";
 
 defineOptions({
   name: 'Card'
 });
+
+const props = defineProps({
+  variant: {
+    type: String,
+    default: "default",
+    validator: (v) => ["default", "highlighted"].includes(v),
+  },
+});
+
+const additionalClasses = computed(() =>
+  [
+    props.variant !== "default" && `card--${props.variant}`,
+  ]
+    .filter(Boolean)
+    .join(" ")
+);
 </script>

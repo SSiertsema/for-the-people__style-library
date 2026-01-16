@@ -26,19 +26,22 @@
       },
       "text": {
         "default": {
-          "value": "{text.muted}",
-          "type": "color"
+          "value": "{text.secondary}",
+          "type": "color",
+          "description": "Inactive tab text"
         },
         "hover": {
           "value": "{text.default}",
-          "type": "color"
+          "type": "color",
+          "description": "Tab text on hover"
         },
         "active": {
-          "value": "{brand.primary}",
-          "type": "color"
+          "value": "{orange.500}",
+          "type": "color",
+          "description": "Active tab text - visible accent"
         },
         "disabled": {
-          "value": "{neutral.400}",
+          "value": "rgba(255, 255, 255, 0.38)",
           "type": "color"
         }
       },
@@ -48,7 +51,7 @@
           "type": "color"
         },
         "hover": {
-          "value": "{neutral.50}",
+          "value": "rgba(255, 255, 255, 0.05)",
           "type": "color"
         },
         "active": {
@@ -59,9 +62,9 @@
     },
     "indicator": {
       "color": {
-        "value": "{brand.primary}",
+        "value": "{orange.500}",
         "type": "color",
-        "description": "Active tab indicator color"
+        "description": "Active tab indicator - visible accent"
       },
       "height": {
         "value": "2px",
@@ -82,7 +85,7 @@
         "type": "dimension"
       },
       "ringColor": {
-        "value": "{brand.primary}",
+        "value": "{orange.500}",
         "type": "color"
       },
       "ringOffset": {

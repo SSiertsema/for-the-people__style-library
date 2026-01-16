@@ -30,12 +30,12 @@
       },
       "background": {
         "default": {
-          "value": "{surface.muted}",
+          "value": "{navy.800}",
           "type": "color",
           "description": "Header background"
         },
         "hover": {
-          "value": "{neutral.100}",
+          "value": "{navy.700}",
           "type": "color",
           "description": "Header hover background when toggleable"
         }

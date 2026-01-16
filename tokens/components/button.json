@@ -18,29 +18,29 @@
           "description": "Primary button active/pressed background"
         },
         "disabled": {
-          "value": "{neutral.200}",
+          "value": "{navy.700}",
           "type": "color",
           "description": "Primary button disabled background"
         }
       },
       "secondary": {
         "default": {
-          "value": "{intent.secondary.default}",
+          "value": "{navy.800}",
           "type": "color",
           "description": "Secondary button background"
         },
         "hover": {
-          "value": "{intent.secondary.hover}",
+          "value": "{navy.700}",
           "type": "color",
           "description": "Secondary button hover background"
         },
         "active": {
-          "value": "{neutral.100}",
+          "value": "{navy.600}",
           "type": "color",
-          "description": "Secondary button active/pressed background"
+          "description": "Secondary button active background"
         },
         "disabled": {
-          "value": "{neutral.100}",
+          "value": "{navy.800}",
           "type": "color",
           "description": "Secondary button disabled background"
         }
@@ -52,12 +52,12 @@
           "description": "Outlined button background"
         },
         "hover": {
-          "value": "{neutral.50}",
+          "value": "{navy.800}",
           "type": "color",
           "description": "Outlined button hover background"
         },
         "active": {
-          "value": "{neutral.100}",
+          "value": "{navy.700}",
           "type": "color",
           "description": "Outlined button active/pressed background"
         },
@@ -74,12 +74,12 @@
           "description": "Text button background"
         },
         "hover": {
-          "value": "{neutral.100}",
+          "value": "{navy.700}",
           "type": "color",
           "description": "Text button hover background"
         },
         "active": {
-          "value": "{neutral.200}",
+          "value": "{navy.600}",
           "type": "color",
           "description": "Text button active/pressed background"
         },
@@ -88,14 +88,31 @@
           "type": "color",
           "description": "Text button disabled background"
         }
+      },
+      "gradient": {
+        "activeStart": {
+          "value": "{orange.600}",
+          "type": "color",
+          "description": "Primary button active gradient start color"
+        },
+        "activeEnd": {
+          "value": "{amber.600}",
+          "type": "color",
+          "description": "Primary button active gradient end color"
+        }
       }
     },
     "text": {
       "primary": {
         "default": {
-          "value": "{text.inverse}",
+          "value": "{neutral.0}",
           "type": "color",
-          "description": "Primary button text color"
+          "description": "Primary button text color - white"
+        },
+        "shadow": {
+          "value": "0 0 2px rgba(0, 0, 0, 0.3)",
+          "type": "shadow",
+          "description": "Primary button text shadow glow"
         },
         "disabled": {
           "value": "{neutral.400}",
@@ -105,36 +122,36 @@
       },
       "secondary": {
         "default": {
-          "value": "{brand.primary}",
+          "value": "{text.default}",
           "type": "color",
           "description": "Secondary button text color"
         },
         "disabled": {
-          "value": "{neutral.400}",
+          "value": "{navy.500}",
           "type": "color",
           "description": "Secondary button disabled text color"
         }
       },
       "outlined": {
         "default": {
-          "value": "{brand.primary}",
+          "value": "{text.default}",
           "type": "color",
           "description": "Outlined button text color"
         },
         "disabled": {
-          "value": "{neutral.400}",
+          "value": "{navy.500}",
           "type": "color",
           "description": "Outlined button disabled text color"
         }
       },
       "text": {
         "default": {
-          "value": "{brand.primary}",
+          "value": "{text.default}",
           "type": "color",
           "description": "Text button text color"
         },
         "disabled": {
-          "value": "{neutral.400}",
+          "value": "{navy.500}",
           "type": "color",
           "description": "Text button disabled text color"
         }
@@ -165,22 +182,22 @@
       },
       "secondary": {
         "default": {
-          "value": "{intent.secondary.border}",
+          "value": "transparent",
           "type": "color",
-          "description": "Secondary button border"
+          "description": "Secondary button border (gradient via pseudo-element)"
         },
         "hover": {
-          "value": "{intent.secondary.border}",
+          "value": "transparent",
           "type": "color",
           "description": "Secondary button hover border"
         },
         "active": {
-          "value": "{intent.secondary.border}",
+          "value": "transparent",
           "type": "color",
           "description": "Secondary button active border"
         },
         "disabled": {
-          "value": "{neutral.300}",
+          "value": "{navy.600}",
           "type": "color",
           "description": "Secondary button disabled border"
         }
@@ -236,9 +253,16 @@
       }
     },
     "radius": {
-      "value": "{radius.default}",
-      "type": "dimension",
-      "description": "Button border radius"
+      "default": {
+        "value": "{radius.default}",
+        "type": "dimension",
+        "description": "Button border radius"
+      },
+      "pill": {
+        "value": "9999px",
+        "type": "dimension",
+        "description": "Pill button border radius"
+      }
     },
     "size": {
       "sm": {

@@ -1,7 +1,0 @@
-.storybook
-.vscode
-storybook-static
-vite.config.js
-workflow
-src/**/*.mdx
-README.md

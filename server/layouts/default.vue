@@ -1,8 +1,28 @@
 <script setup lang="ts">
 import { ChevronRight } from 'lucide-vue-next'
 
+// Quick navigation
+const quickNavVisible = ref(false)
+
+function handleGlobalKeydown(event: KeyboardEvent) {
+  // Ctrl+F or Cmd+F to open quick nav
+  if ((event.ctrlKey || event.metaKey) && event.key === 'f') {
+    event.preventDefault()
+    quickNavVisible.value = true
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', handleGlobalKeydown)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleGlobalKeydown)
+})
+
 const navigation = [
   { path: '/', label: 'Home' },
+  { path: '/kitchen-sink', label: 'Kitchen Sink' },
   {
     label: 'Style Library',
     children: [
@@ -227,6 +247,11 @@ function isExpanded(label: string) {
     <main class="main">
       <slot />
     </main>
+
+    <QuickNav
+      :visible="quickNavVisible"
+      @close="quickNavVisible = false"
+    />
   </div>
 </template>
 
@@ -238,8 +263,8 @@ function isExpanded(label: string) {
 
 .sidebar {
   width: 260px;
-  background: var(--doc-accent);
-  color: var(--doc-text-inverse);
+  background: var(--doc-surface-sidebar);
+  color: var(--doc-text-default);
   flex-shrink: 0;
   position: sticky;
   top: 0;
@@ -350,7 +375,7 @@ function isExpanded(label: string) {
 
 .main {
   flex: 1;
-  background: var(--doc-surface-muted);
+  background: var(--doc-surface-page);
   min-height: 100vh;
 }
 </style>

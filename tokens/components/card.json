@@ -17,6 +17,30 @@
         "description": "Card border width"
       }
     },
+    "highlighted": {
+      "border": {
+        "start": {
+          "value": "{orange.500}",
+          "type": "color",
+          "description": "Highlighted card border - vibrant orange"
+        },
+        "end": {
+          "value": "{orange.400}",
+          "type": "color",
+          "description": "Highlighted card border end - bright orange"
+        },
+        "width": {
+          "value": "3px",
+          "type": "dimension",
+          "description": "Highlighted card border width"
+        }
+      },
+      "glow": {
+        "value": "0 0 15px rgba(249, 115, 22, 0.5), 0 0 30px rgba(249, 115, 22, 0.3), 0 0 45px rgba(249, 115, 22, 0.15)",
+        "type": "shadow",
+        "description": "Highlighted card glow effect - vibrant orange"
+      }
+    },
     "radius": {
       "value": "{radius.large}",
       "type": "dimension",

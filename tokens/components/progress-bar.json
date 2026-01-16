@@ -6,8 +6,9 @@
         "type": "dimension"
       },
       "background": {
-        "value": "{neutral.200}",
-        "type": "color"
+        "value": "rgba(255, 255, 255, 0.15)",
+        "type": "color",
+        "description": "Track background - semi-transparent for dark backgrounds"
       },
       "radius": {
         "value": "{radius.pill}",
@@ -16,14 +17,16 @@
     },
     "fill": {
       "background": {
-        "value": "{brand.primary}",
-        "type": "color"
+        "value": "{orange.500}",
+        "type": "color",
+        "description": "Fill color - visible accent"
       }
     },
     "label": {
       "color": {
-        "value": "{text.inverse}",
-        "type": "color"
+        "value": "{neutral.0}",
+        "type": "color",
+        "description": "Label text on fill"
       }
     }
   }

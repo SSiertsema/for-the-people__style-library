@@ -1,4 +1,5 @@
 @use "../../../dist/scss/tokens" as *;
+@use "../../scss/mixins/accent-gradient.scss" as *;
 
 $c: tabs;
 
@@ -42,8 +43,14 @@ $c: tabs;
 }
 
 .#{$c}__tab--active {
-  color: var(--tabs-tab-text-active, $tabs-tab-text-active);
-  background: var(--tabs-tab-background-active, $tabs-tab-background-active);
+  background: linear-gradient(
+    90deg,
+    var(--accent-gradient-start, $accent-gradient-start),
+    var(--accent-gradient-end, $accent-gradient-end)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .#{$c}__tab--disabled {
@@ -57,7 +64,7 @@ $c: tabs;
   bottom: 0;
   left: 0;
   height: var(--tabs-indicator-height, $tabs-indicator-height);
-  background-color: var(--tabs-indicator-color, $tabs-indicator-color);
+  @include accent-gradient($angle: 90deg);
   transition: transform 0.2s ease, width 0.2s ease;
 }
 

@@ -13,12 +13,12 @@
       },
       "color": {
         "incomplete": {
-          "value": "{neutral.300}",
+          "value": "{navy.600}",
           "type": "color",
           "description": "Incomplete connector color"
         },
         "complete": {
-          "value": "{brand.primary}",
+          "value": "{orange.500}",
           "type": "color",
           "description": "Completed connector color"
         }
@@ -42,34 +42,34 @@
       },
       "background": {
         "incomplete": {
-          "value": "{neutral.200}",
+          "value": "transparent",
           "type": "color",
           "description": "Incomplete step marker background"
         },
         "active": {
-          "value": "{brand.primary}",
+          "value": "{orange.500}",
           "type": "color",
           "description": "Active step marker background"
         },
         "complete": {
-          "value": "{brand.primary}",
+          "value": "{orange.500}",
           "type": "color",
           "description": "Completed step marker background"
         }
       },
       "text": {
         "incomplete": {
-          "value": "{text.muted}",
+          "value": "{navy.400}",
           "type": "color",
           "description": "Incomplete step number color"
         },
         "active": {
-          "value": "{text.inverse}",
+          "value": "{neutral.0}",
           "type": "color",
           "description": "Active step number color"
         },
         "complete": {
-          "value": "{text.inverse}",
+          "value": "{neutral.0}",
           "type": "color",
           "description": "Completed step number/icon color"
         }
@@ -82,17 +82,17 @@
         },
         "color": {
           "incomplete": {
-            "value": "{neutral.300}",
+            "value": "{navy.600}",
             "type": "color",
             "description": "Incomplete marker border color"
           },
           "active": {
-            "value": "{brand.primary}",
+            "value": "{orange.500}",
             "type": "color",
             "description": "Active marker border color"
           },
           "complete": {
-            "value": "{brand.primary}",
+            "value": "{orange.500}",
             "type": "color",
             "description": "Completed marker border color"
           }
@@ -112,7 +112,7 @@
       },
       "color": {
         "incomplete": {
-          "value": "{text.muted}",
+          "value": "{navy.400}",
           "type": "color",
           "description": "Incomplete step label color"
         },
@@ -140,7 +140,7 @@
         "description": "Focus ring width"
       },
       "ringColor": {
-        "value": "{focus.ring}",
+        "value": "{orange.500}",
         "type": "color",
         "description": "Focus ring color"
       },

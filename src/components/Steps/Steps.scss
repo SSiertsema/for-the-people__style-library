@@ -1,4 +1,5 @@
 @use "../../../dist/scss/tokens" as *;
+@use "../../scss/mixins/accent-gradient.scss" as *;
 
 $c: steps;
 
@@ -34,7 +35,7 @@ $c: steps;
 }
 
 .#{$c}__connector--complete {
-  background-color: var(--steps-connector-color-complete, $steps-connector-color-complete);
+  @include accent-gradient($angle: 90deg);
 }
 
 .#{$c}__marker-wrapper {
@@ -114,9 +115,10 @@ $c: steps;
 // Active state
 .#{$c}__item--active {
   .#{$c}__marker {
-    background-color: var(--steps-marker-background-active, $steps-marker-background-active);
-    border-color: var(--steps-marker-border-color-active, $steps-marker-border-color-active);
+    @include accent-gradient();
+    border-color: var(--accent-gradient-start, $accent-gradient-start);
     color: var(--steps-marker-text-active, $steps-marker-text-active);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   }
 
   .#{$c}__label {
@@ -127,9 +129,10 @@ $c: steps;
 // Complete state
 .#{$c}__item--complete {
   .#{$c}__marker {
-    background-color: var(--steps-marker-background-complete, $steps-marker-background-complete);
-    border-color: var(--steps-marker-border-color-complete, $steps-marker-border-color-complete);
+    @include accent-gradient();
+    border-color: var(--accent-gradient-start, $accent-gradient-start);
     color: var(--steps-marker-text-complete, $steps-marker-text-complete);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   }
 
   .#{$c}__label {

@@ -43,19 +43,25 @@
       },
       "color": {
         "default": {
-          "value": "{neutral.400}",
-          "type": "color"
+          "value": "{navy.500}",
+          "type": "color",
+          "description": "Visible on dark backgrounds"
         },
         "hover": {
-          "value": "{neutral.500}",
+          "value": "{navy.400}",
           "type": "color"
         },
+        "checked": {
+          "value": "{orange.500}",
+          "type": "color",
+          "description": "Accent color when checked"
+        },
         "focus": {
-          "value": "{brand.primary}",
+          "value": "{orange.500}",
           "type": "color"
         },
         "disabled": {
-          "value": "{neutral.200}",
+          "value": "{navy.700}",
           "type": "color"
         },
         "error": {
@@ -66,19 +72,21 @@
     },
     "background": {
       "default": {
-        "value": "{surface.canvas}",
-        "type": "color"
+        "value": "transparent",
+        "type": "color",
+        "description": "Transparent to show dark page background"
       },
       "checked": {
-        "value": "{brand.primary}",
-        "type": "color"
+        "value": "{orange.500}",
+        "type": "color",
+        "description": "Bright accent for visibility on dark backgrounds"
       },
       "disabled": {
-        "value": "{neutral.100}",
+        "value": "{navy.800}",
         "type": "color"
       },
       "hover": {
-        "value": "{neutral.50}",
+        "value": "{navy.800}",
         "type": "color"
       }
     },
@@ -110,7 +118,7 @@
         "type": "dimension"
       },
       "ringColor": {
-        "value": "{brand.primary}",
+        "value": "{orange.500}",
         "type": "color"
       },
       "ringOffset": {
