@@ -64,5 +64,12 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['~/modules/scss-parser']
+  modules: ['~/modules/scss-parser'],
+
+  nitro: {
+    prerender: {
+      failOnError: false,
+      crawlLinks: true
+    }
+  }
 })
