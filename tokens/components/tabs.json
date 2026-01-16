@@ -1,0 +1,94 @@
+{
+  "tabs": {
+    "nav": {
+      "borderColor": {
+        "value": "{border.subtle}",
+        "type": "color",
+        "description": "Border color for tab navigation"
+      },
+      "borderWidth": {
+        "value": "1px",
+        "type": "dimension"
+      }
+    },
+    "tab": {
+      "padding": {
+        "x": {
+          "value": "{inset.m}",
+          "type": "dimension",
+          "description": "Horizontal tab padding"
+        },
+        "y": {
+          "value": "{inset.s}",
+          "type": "dimension",
+          "description": "Vertical tab padding"
+        }
+      },
+      "text": {
+        "default": {
+          "value": "{text.muted}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{text.default}",
+          "type": "color"
+        },
+        "active": {
+          "value": "{brand.primary}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{neutral.400}",
+          "type": "color"
+        }
+      },
+      "background": {
+        "default": {
+          "value": "transparent",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{neutral.50}",
+          "type": "color"
+        },
+        "active": {
+          "value": "transparent",
+          "type": "color"
+        }
+      }
+    },
+    "indicator": {
+      "color": {
+        "value": "{brand.primary}",
+        "type": "color",
+        "description": "Active tab indicator color"
+      },
+      "height": {
+        "value": "2px",
+        "type": "dimension",
+        "description": "Active tab indicator thickness"
+      }
+    },
+    "content": {
+      "padding": {
+        "value": "{inset.m}",
+        "type": "dimension",
+        "description": "Tab panel content padding"
+      }
+    },
+    "focus": {
+      "ringWidth": {
+        "value": "2px",
+        "type": "dimension"
+      },
+      "ringColor": {
+        "value": "{brand.primary}",
+        "type": "color"
+      },
+      "ringOffset": {
+        "value": "2px",
+        "type": "dimension"
+      }
+    }
+  }
+}

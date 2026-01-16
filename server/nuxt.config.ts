@@ -45,7 +45,10 @@ export default defineNuxtConfig({
   vite: {
     resolve: {
       alias: {
-        '@pzh-temporary/style-library': resolve(__dirname, '../')
+        '@pzh-temporary/style-library': resolve(__dirname, '../'),
+        '@lib': resolve(__dirname, '../src'),
+        '@components': resolve(__dirname, '../src/components'),
+        '@tokens': resolve(__dirname, '../dist')
       }
     },
     css: {

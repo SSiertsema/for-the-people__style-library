@@ -15,19 +15,158 @@ const navigation = [
       { path: '/style-library/levitation', label: 'Levitation' },
       { path: '/style-library/icons', label: 'Icons' },
       { path: '/style-library/grid', label: 'Grid' },
-      { path: '/style-library/container', label: 'Container' },
-      { path: '/style-library/token-editor', label: 'Token Editor' }
+      { path: '/style-library/container', label: 'Container' }
     ]
   },
   {
-    label: 'Components',
+    label: 'Form',
     children: [
-      { path: '/components/avatar', label: 'Avatar' }
+      { path: '/components/form/input-text', label: 'InputText' },
+      { path: '/components/form/textarea', label: 'Textarea' },
+      { path: '/components/form/input-number', label: 'InputNumber' },
+      { path: '/components/form/input-mask', label: 'InputMask' },
+      { path: '/components/form/input-otp', label: 'InputOTP' },
+      { path: '/components/form/input-chips', label: 'InputChips' },
+      { path: '/components/form/autocomplete', label: 'AutoComplete' },
+      { path: '/components/form/calendar', label: 'Calendar' },
+      { path: '/components/form/color-picker', label: 'ColorPicker' },
+      { path: '/components/form/editor', label: 'Editor' },
+      { path: '/components/form/checkbox', label: 'Checkbox' },
+      { path: '/components/form/radio-button', label: 'RadioButton' },
+      { path: '/components/form/select', label: 'Select' },
+      { path: '/components/form/dropdown', label: 'Dropdown' },
+      { path: '/components/form/multi-select', label: 'MultiSelect' },
+      { path: '/components/form/list-box', label: 'ListBox' },
+      { path: '/components/form/tree-select', label: 'TreeSelect' },
+      { path: '/components/form/input-switch', label: 'InputSwitch' },
+      { path: '/components/form/toggle-switch', label: 'ToggleSwitch' },
+      { path: '/components/form/toggle-button', label: 'ToggleButton' },
+      { path: '/components/form/select-button', label: 'SelectButton' },
+      { path: '/components/form/slider', label: 'Slider' },
+      { path: '/components/form/knob', label: 'Knob' },
+      { path: '/components/form/rating', label: 'Rating' },
+      { path: '/components/form/input-group', label: 'InputGroup' },
+      { path: '/components/form/input-group-addon', label: 'InputGroupAddon' },
+      { path: '/components/form/input-icon', label: 'InputIcon' }
+    ]
+  },
+  {
+    label: 'Buttons',
+    children: [
+      { path: '/components/button', label: 'Button' },
+      { path: '/components/split-button', label: 'SplitButton' },
+      { path: '/components/speed-dial', label: 'SpeedDial' }
+    ]
+  },
+  {
+    label: 'Data',
+    children: [
+      { path: '/components/data-table', label: 'DataTable' },
+      { path: '/components/data-view', label: 'DataView' },
+      { path: '/components/order-list', label: 'OrderList' },
+      { path: '/components/organization-chart', label: 'OrganizationChart' },
+      { path: '/components/paginator', label: 'Paginator' },
+      { path: '/components/picklist', label: 'PickList' },
+      { path: '/components/timeline', label: 'Timeline' },
+      { path: '/components/tree', label: 'Tree' },
+      { path: '/components/treetable', label: 'TreeTable' },
+      { path: '/components/virtualscroller', label: 'VirtualScroller' },
+      { path: '/components/column', label: 'Column' },
+      { path: '/components/column-group', label: 'ColumnGroup' },
+      { path: '/components/form/row', label: 'Row' }
+    ]
+  },
+  {
+    label: 'Panel',
+    children: [
+      { path: '/components/accordion', label: 'Accordion' },
+      { path: '/components/card', label: 'Card' },
+      { path: '/components/divider', label: 'Divider' },
+      { path: '/components/field-set', label: 'FieldSet' },
+      { path: '/components/panel', label: 'Panel' },
+      { path: '/components/scroll-panel', label: 'ScrollPanel' },
+      { path: '/components/splitter', label: 'Splitter' },
+      { path: '/components/tabs', label: 'Tabs' },
+      { path: '/components/toolbar', label: 'Toolbar' }
+    ]
+  },
+  {
+    label: 'Overlay',
+    children: [
+      { path: '/components/confirm-dialog', label: 'ConfirmDialog' },
+      { path: '/components/confirm-popup', label: 'ConfirmPopup' },
+      { path: '/components/dialog', label: 'Dialog' },
+      { path: '/components/drawer', label: 'Drawer' },
+      { path: '/components/overlay-panel', label: 'OverlayPanel' },
+      { path: '/components/pop-over', label: 'PopOver' },
+      { path: '/components/sidebar', label: 'Sidebar' },
+      { path: '/components/tooltip', label: 'Tooltip' }
+    ]
+  },
+  {
+    label: 'Menu',
+    children: [
+      { path: '/components/breadcrumb', label: 'Breadcrumb' },
+      { path: '/components/context-menu', label: 'ContextMenu' },
+      { path: '/components/dock', label: 'Dock' },
+      { path: '/components/mega-menu', label: 'MegaMenu' },
+      { path: '/components/menu', label: 'Menu' },
+      { path: '/components/menu-bar', label: 'MenuBar' },
+      { path: '/components/panel-menu', label: 'PanelMenu' },
+      { path: '/components/steps', label: 'Steps' },
+      { path: '/components/tab-menu', label: 'TabMenu' },
+      { path: '/components/tiered-menu', label: 'TieredMenu' }
+    ]
+  },
+  {
+    label: 'Messages',
+    children: [
+      { path: '/components/inline-message', label: 'InlineMessage' },
+      { path: '/components/message', label: 'Message' },
+      { path: '/components/toast', label: 'Toast' }
+    ]
+  },
+  {
+    label: 'File',
+    children: [
+      { path: '/components/file-upload', label: 'FileUpload' }
+    ]
+  },
+  {
+    label: 'Media',
+    children: [
+      { path: '/components/carousel', label: 'Carousel' },
+      { path: '/components/galleria', label: 'Galleria' },
+      { path: '/components/image', label: 'Image' },
+      { path: '/components/image-compare', label: 'ImageCompare' }
+    ]
+  },
+  {
+    label: 'Chart',
+    children: [
+      { path: '/components/chart', label: 'Chart' }
+    ]
+  },
+  {
+    label: 'Misc',
+    children: [
+      { path: '/components/avatar', label: 'Avatar' },
+      { path: '/components/badge', label: 'Badge' },
+      { path: '/components/block-ui', label: 'BlockUI' },
+      { path: '/components/chip', label: 'Chip' },
+      { path: '/components/in-place', label: 'InPlace' },
+      { path: '/components/meter-group', label: 'MeterGroup' },
+      { path: '/components/progress-bar', label: 'ProgressBar' },
+      { path: '/components/progress-spinner', label: 'ProgressSpinner' },
+      { path: '/components/scroll-top', label: 'ScrollTop' },
+      { path: '/components/skeleton', label: 'Skeleton' },
+      { path: '/components/tag', label: 'Tag' },
+      { path: '/components/terminal', label: 'Terminal' }
     ]
   }
 ]
 
-const expandedGroups = ref<string[]>(['Style Library', 'Components'])
+const expandedGroups = ref<string[]>(['Style Library', 'Form'])
 
 function toggleGroup(label: string) {
   const index = expandedGroups.value.indexOf(label)

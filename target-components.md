@@ -1,6 +1,6 @@
 # PrimeVue Components Integration Checklist
 
-Each component should follow the pattern established in `pzh-components/components/InputText/`:
+Each component should follow the pattern established in `src/components/`:
 - `ComponentName.vue` - Vue SFC with template, script setup, style reference
 - `ComponentName.scss` - SCSS styles using library mixins/variables
 - Add demo to appropriate `server/pages/components/*.vue` docs page
@@ -9,129 +9,129 @@ Each component should follow the pattern established in `pzh-components/componen
 
 ## Form Components
 
-- [ ] AutoComplete
-- [ ] Calendar
-- [ ] Checkbox
-- [ ] ColorPicker
-- [ ] Dropdown
-- [ ] Editor
-- [ ] InputChips
-- [ ] InputMask
-- [ ] InputNumber
-- [ ] InputOTP
-- [ ] InputSwitch
+- [x] AutoComplete
+- [x] Calendar
+- [x] Checkbox
+- [x] ColorPicker
+- [x] Dropdown
+- [x] Editor
+- [x] InputChips
+- [x] InputMask
+- [x] InputNumber
+- [x] InputOTP
+- [x] InputSwitch
 - [x] InputText
 - [x] InputTextarea
-- [ ] Knob
-- [ ] ListBox
-- [ ] MultiSelect
-- [ ] RadioButton
-- [ ] Rating
-- [ ] Select
-- [ ] SelectButton
-- [ ] Slider
-- [ ] ToggleButton
-- [ ] ToggleSwitch
-- [ ] TreeSelect
+- [x] Knob
+- [x] ListBox
+- [x] MultiSelect
+- [x] RadioButton
+- [x] Rating
+- [x] Select
+- [x] SelectButton
+- [x] Slider
+- [x] ToggleButton
+- [x] ToggleSwitch
+- [x] TreeSelect
 
 ## Button Components
 
-- [ ] Button
-- [ ] SpeedDial
-- [ ] SplitButton
+- [x] Button
+- [x] SpeedDial
+- [x] SplitButton
 
 ## Data Components
 
-- [ ] DataTable
-- [ ] DataView
-- [ ] OrderList
-- [ ] OrganizationChart
-- [ ] Paginator
-- [ ] PickList
-- [ ] Timeline
-- [ ] Tree
-- [ ] TreeTable
-- [ ] VirtualScroller
+- [x] DataTable
+- [x] DataView
+- [x] OrderList
+- [x] OrganizationChart
+- [x] Paginator
+- [x] PickList
+- [x] Timeline
+- [x] Tree
+- [x] TreeTable
+- [x] VirtualScroller
 
 ## Panel Components
 
-- [ ] Accordion
-- [ ] Card
-- [ ] Divider
-- [ ] FieldSet
-- [ ] Panel
-- [ ] ScrollPanel
-- [ ] Splitter
-- [ ] TabView
-- [ ] Toolbar
+- [x] Accordion
+- [x] Card
+- [x] Divider
+- [x] FieldSet
+- [x] Panel
+- [x] ScrollPanel
+- [x] Splitter
+- [x] TabView
+- [x] Toolbar
 
 ## Overlay Components
 
-- [ ] ConfirmDialog
-- [ ] ConfirmPopup
-- [ ] Dialog
-- [ ] Drawer
-- [ ] OverlayPanel
-- [ ] PopOver
-- [ ] Sidebar
+- [x] ConfirmDialog
+- [x] ConfirmPopup
+- [x] Dialog
+- [x] Drawer
+- [x] OverlayPanel
+- [x] PopOver
+- [x] Sidebar
 
 ## File Components
 
-- [ ] FileUpload
+- [x] FileUpload
 
 ## Menu Components
 
-- [ ] Breadcrumb
-- [ ] ContextMenu
-- [ ] Dock
-- [ ] MegaMenu
-- [ ] Menu
-- [ ] MenuBar
-- [ ] PanelMenu
-- [ ] Steps
-- [ ] TabMenu
-- [ ] TieredMenu
+- [x] Breadcrumb
+- [x] ContextMenu
+- [x] Dock
+- [x] MegaMenu
+- [x] Menu
+- [x] MenuBar
+- [x] PanelMenu
+- [x] Steps
+- [x] TabMenu
+- [x] TieredMenu
 
 ## Chart Components
 
-- [ ] Chart
+- [x] Chart
 
 ## Message Components
 
-- [ ] InlineMessage
-- [ ] Message
-- [ ] Toast
+- [x] InlineMessage
+- [x] Message
+- [x] Toast
 
 ## Media Components
 
-- [ ] Carousel
-- [ ] Galleria
-- [ ] Image
-- [ ] ImageCompare
+- [x] Carousel
+- [x] Galleria
+- [x] Image
+- [x] ImageCompare
 
 ## Misc Components
 
 - [x] Avatar
-- [ ] Badge
-- [ ] BlockUI
-- [ ] Chip
-- [ ] InPlace
-- [ ] MeterGroup
-- [ ] ProgressBar
-- [ ] ProgressSpinner
-- [ ] ScrollTop
-- [ ] Skeleton
-- [ ] Tag
-- [ ] Terminal
+- [x] Badge
+- [x] BlockUI
+- [x] Chip
+- [x] InPlace
+- [x] MeterGroup
+- [x] ProgressBar
+- [x] ProgressSpinner
+- [x] ScrollTop
+- [x] Skeleton
+- [x] Tag
+- [x] Terminal
 
 ## Layout/Structural Components
 
-- [ ] Column
-- [ ] ColumnGroup
-- [ ] InputGroup
-- [ ] InputGroupAddon
-- [ ] InputIcon
-- [ ] Row
+- [x] Column
+- [x] ColumnGroup
+- [x] InputGroup
+- [x] InputGroupAddon
+- [x] InputIcon
+- [x] Row
 
 ## Directives
 
@@ -141,7 +141,7 @@ Each component should follow the pattern established in `pzh-components/componen
 - [ ] KeyFilter
 - [ ] Ripple
 - [ ] StyleClass
-- [ ] Tooltip
+- [x] Tooltip
 
 ## Utilities
 
@@ -165,5 +165,8 @@ Each component should follow the pattern established in `pzh-components/componen
 ---
 
 **Total: 90 components**
+**Completed: 90 components (all main components done)**
+
+Remaining: Directives (6), Utilities (2), Services (4), Composables (4)
 
 Source: [PrimeVue GitHub Repository](https://github.com/primefaces/primevue)

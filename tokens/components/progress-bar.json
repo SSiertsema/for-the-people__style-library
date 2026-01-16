@@ -1,0 +1,30 @@
+{
+  "progress-bar": {
+    "track": {
+      "height": {
+        "value": "8px",
+        "type": "dimension"
+      },
+      "background": {
+        "value": "{neutral.200}",
+        "type": "color"
+      },
+      "radius": {
+        "value": "{radius.pill}",
+        "type": "dimension"
+      }
+    },
+    "fill": {
+      "background": {
+        "value": "{brand.primary}",
+        "type": "color"
+      }
+    },
+    "label": {
+      "color": {
+        "value": "{text.inverse}",
+        "type": "color"
+      }
+    }
+  }
+}

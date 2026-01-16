@@ -1,0 +1,76 @@
+{
+  "slider": {
+    "track": {
+      "height": {
+        "value": "6px",
+        "type": "dimension"
+      },
+      "background": {
+        "default": {
+          "value": "{neutral.200}",
+          "type": "color"
+        },
+        "fill": {
+          "value": "{brand.primary}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{neutral.100}",
+          "type": "color"
+        }
+      },
+      "radius": {
+        "value": "{radius.pill}",
+        "type": "dimension"
+      }
+    },
+    "thumb": {
+      "size": {
+        "value": "20px",
+        "type": "dimension"
+      },
+      "background": {
+        "default": {
+          "value": "{brand.primary}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{navy.700}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{neutral.300}",
+          "type": "color"
+        }
+      },
+      "border": {
+        "width": {
+          "value": "2px",
+          "type": "dimension"
+        },
+        "color": {
+          "value": "{neutral.0}",
+          "type": "color"
+        }
+      },
+      "shadow": {
+        "value": "0 2px 4px rgba(0, 0, 0, 0.15)",
+        "type": "shadow"
+      }
+    },
+    "focus": {
+      "ringWidth": {
+        "value": "2px",
+        "type": "dimension"
+      },
+      "ringColor": {
+        "value": "{brand.primary}",
+        "type": "color"
+      },
+      "ringOffset": {
+        "value": "2px",
+        "type": "dimension"
+      }
+    }
+  }
+}

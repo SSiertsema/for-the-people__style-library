@@ -92,13 +92,42 @@ When replicating a PrimeVue component, follow these steps:
 - Note all props, events, slots, and features
 - Adapt prop names to library conventions (e.g., `isDisabled` instead of `disabled`)
 
-### 2. Create component files
-Create folder: `pzh-components/components/{ComponentName}/`
+### 2. Create component token file
+Create token file: `tokens/components/{component-name}.json`
+
+Use semantic token references (not primitive tokens directly):
+- Spacing: `{inset.s}`, `{inset.m}`, `{inline.s}`, `{stack.m}`
+- Radius: `{radius.subtle}`, `{radius.default}`, `{radius.rounded}`
+- Colors: `{neutral.400}`, `{brand.primary}`, `{text.default}`, `{surface.canvas}`
+- Shadows: `{shadow.s}`, `{shadow.m}`
+
+```json
+{
+  "componentName": {
+    "size": {
+      "sm": { "value": "32px", "type": "dimension" },
+      "md": { "value": "40px", "type": "dimension" }
+    },
+    "background": {
+      "default": { "value": "{surface.canvas}", "type": "color" },
+      "hover": { "value": "{neutral.50}", "type": "color" }
+    },
+    "border": {
+      "color": {
+        "default": { "value": "{neutral.300}", "type": "color" }
+      }
+    }
+  }
+}
+```
+
+### 3. Create component files
+Create folder: `src/components/{ComponentName}/`
 
 **{ComponentName}.vue:**
 ```vue
 <template>
-  <div class="pzh-{component-name}" :class="additionalClasses">
+  <div class="{component-name}" :class="additionalClasses">
     <!-- component markup -->
   </div>
 </template>
@@ -113,50 +142,82 @@ const props = defineProps({
 });
 
 const additionalClasses = computed(() =>
-  [`pzh-{component-name}--size-${props.size}`].join(" ")
+  [`{component-name}--size-${props.size}`].join(" ")
 );
 </script>
 ```
 
 **{ComponentName}.scss:**
 ```scss
-@use "@pzh-temporary/style-library/src/scss/variables/colors.scss" as *;
-@use "@pzh-temporary/style-library/src/scss/variables/spacers.scss" as *;
-@use "@pzh-temporary/style-library/src/scss/variables/radii.scss" as *;
-@use "@pzh-temporary/style-library/src/scss/mixins/typography.scss" as *;
-@use "@pzh-temporary/style-library/src/scss/mixins/levitation.scss" as *;
+@use "../../../dist/scss/tokens" as *;
 
-$c: pzh-{component-name};
+$c: {component-name};
 
 .#{$c} {
-  // base styles using variables only
+  // Use CSS custom properties with SCSS fallbacks
+  background-color: var(--componentName-background-default, $componentName-background-default);
+  border: 1px solid var(--componentName-border-color-default, $componentName-border-color-default);
 }
 
-.#{$c}--size-small {
-  // size variant
+.#{$c}--size-sm {
+  height: var(--componentName-size-sm, $componentName-size-sm);
 }
 ```
 
-### 3. Add to documentation
-Add component demo to appropriate `server/pages/components/*.vue` page:
+### 4. Build tokens
+Run `npx tsx scripts/build-tokens.ts` to generate CSS/SCSS output.
+
+### 5. Add to documentation
+Create documentation page: `server/pages/components/form/{component-name}.vue`
+
+Use aliases for clean imports:
+- `@components` → `src/components`
+- `@lib` → `src`
+- `@tokens` → `dist`
 
 ```vue
-<script setup>
+<script setup lang="ts">
+import ComponentName from '@components/ComponentName/ComponentName.vue'
+import '@components/ComponentName/ComponentName.scss'
+
 const componentProps = [
   { name: 'propName', type: 'String', default: '"value"', description: 'Description' }
 ]
 </script>
 
 <template>
-  <ComponentDemo
-    name="ComponentName"
-    description="Component description."
-    :props="componentProps"
-  >
-    <ComponentName prop="value" />
-  </ComponentDemo>
+  <div class="page">
+    <PageHeader title="ComponentName" description="Component description." />
+    <ComponentDemo name="ComponentName" :props="componentProps">
+      <ComponentName prop="value" />
+    </ComponentDemo>
+  </div>
 </template>
 ```
 
-### 4. Update checklist
+### 6. Add to navigation
+Update `server/layouts/default.vue` to add the component to the sidebar navigation.
+
+### 7. Update checklist
 Mark component as complete in `target-components.md`
+
+## Documentation Server
+
+The documentation server is a Nuxt 3 app in `/server`.
+
+### Path Aliases (configured in nuxt.config.ts)
+| Alias | Path |
+|-------|------|
+| `@lib` | `../src` |
+| `@components` | `../src/components` |
+| `@tokens` | `../dist` |
+
+### Running the server
+```bash
+cd server && npm run dev
+```
+
+### Structure
+- `server/pages/components/form/` - Form component documentation
+- `server/pages/style-library/` - Design token documentation
+- `server/layouts/default.vue` - Navigation sidebar

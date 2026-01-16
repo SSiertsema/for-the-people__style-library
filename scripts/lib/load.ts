@@ -79,15 +79,15 @@ export function deepMerge(target: TokenGroup, source: TokenGroup): TokenGroup {
 }
 
 /**
- * Check if value is a token leaf node (has 'value' property)
+ * Check if value is a token leaf node (has 'value' property with a string value)
  */
 export function isTokenValue(obj: unknown): obj is TokenValue {
-  return typeof obj === 'object' && obj !== null && 'value' in obj;
+  return typeof obj === 'object' && obj !== null && 'value' in obj && typeof (obj as TokenValue).value === 'string';
 }
 
 /**
- * Check if value is a token group (nested object without 'value')
+ * Check if value is a token group (nested object that is not a token leaf)
  */
 export function isTokenGroup(obj: unknown): obj is TokenGroup {
-  return typeof obj === 'object' && obj !== null && !('value' in obj);
+  return typeof obj === 'object' && obj !== null && !isTokenValue(obj);
 }

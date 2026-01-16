@@ -10,6 +10,8 @@
   },
   "text": {
     "default": { "value": "{neutral.900}", "type": "color", "description": "Primary text" },
+    "primary": { "value": "{neutral.900}", "type": "color", "description": "Primary text (alias)" },
+    "secondary": { "value": "{neutral.600}", "type": "color", "description": "Secondary text (alias)" },
     "muted": { "value": "{neutral.600}", "type": "color", "description": "Secondary/helper text" },
     "subtle": { "value": "{neutral.500}", "type": "color", "description": "Placeholder text" },
     "inverse": { "value": "{neutral.0}", "type": "color", "description": "Text on dark backgrounds" },
@@ -57,6 +59,7 @@
   "brand": {
     "primary": { "value": "{navy.700}", "type": "color", "description": "Primary brand color" },
     "secondary": { "value": "{orange.500}", "type": "color", "description": "Secondary brand color (CTA)" },
-    "accent": { "value": "{amber.400}", "type": "color", "description": "Accent brand color" }
+    "accent": { "value": "{amber.400}", "type": "color", "description": "Accent brand color" },
+    "subtle": { "value": "{blue.50}", "type": "color", "description": "Subtle brand background" }
   }
 }

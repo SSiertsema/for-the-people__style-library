@@ -1,0 +1,117 @@
+{
+  "radio": {
+    "size": {
+      "sm": {
+        "value": "16px",
+        "type": "dimension",
+        "description": "Small radio"
+      },
+      "md": {
+        "value": "20px",
+        "type": "dimension",
+        "description": "Medium radio (default)"
+      },
+      "lg": {
+        "value": "24px",
+        "type": "dimension",
+        "description": "Large radio"
+      }
+    },
+    "dotSize": {
+      "sm": {
+        "value": "6px",
+        "type": "dimension"
+      },
+      "md": {
+        "value": "8px",
+        "type": "dimension"
+      },
+      "lg": {
+        "value": "10px",
+        "type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "value": "2px",
+        "type": "dimension"
+      },
+      "color": {
+        "default": {
+          "value": "{neutral.400}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{neutral.500}",
+          "type": "color"
+        },
+        "focus": {
+          "value": "{brand.primary}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{neutral.200}",
+          "type": "color"
+        },
+        "error": {
+          "value": "{feedback.error}",
+          "type": "color"
+        }
+      }
+    },
+    "background": {
+      "default": {
+        "value": "{surface.canvas}",
+        "type": "color"
+      },
+      "checked": {
+        "value": "{brand.primary}",
+        "type": "color"
+      },
+      "disabled": {
+        "value": "{neutral.100}",
+        "type": "color"
+      },
+      "hover": {
+        "value": "{neutral.50}",
+        "type": "color"
+      }
+    },
+    "dot": {
+      "color": {
+        "value": "{neutral.0}",
+        "type": "color"
+      }
+    },
+    "label": {
+      "gap": {
+        "value": "{inset.s}",
+        "type": "dimension"
+      },
+      "color": {
+        "default": {
+          "value": "{text.default}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{text.muted}",
+          "type": "color"
+        }
+      }
+    },
+    "focus": {
+      "ringWidth": {
+        "value": "2px",
+        "type": "dimension"
+      },
+      "ringColor": {
+        "value": "{brand.primary}",
+        "type": "color"
+      },
+      "ringOffset": {
+        "value": "2px",
+        "type": "dimension"
+      }
+    }
+  }
+}

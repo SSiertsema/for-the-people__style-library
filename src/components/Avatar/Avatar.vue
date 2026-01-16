@@ -1,14 +1,14 @@
 <template>
-  <div class="pzh-avatar" :class="additionalClasses">
+  <div class="avatar" :class="additionalClasses">
     <img
       v-if="image && !imageError"
       :src="image"
       :alt="ariaLabel || label || 'avatar'"
-      class="pzh-avatar__image"
+      class="avatar__image"
       @error="onImageError"
     />
-    <span v-else-if="label" class="pzh-avatar__label">{{ label }}</span>
-    <i v-else-if="icon" :class="icon" class="pzh-avatar__icon"></i>
+    <span v-else-if="label" class="avatar__label">{{ label }}</span>
+    <i v-else-if="icon" :class="icon" class="avatar__icon"></i>
     <slot v-else />
   </div>
 </template>
@@ -46,8 +46,8 @@ const onImageError = (event) => {
 
 const additionalClasses = computed(() =>
   [
-    `pzh-avatar--size-${props.size}`,
-    `pzh-avatar--shape-${props.shape}`,
+    `avatar--size-${props.size}`,
+    `avatar--shape-${props.shape}`,
   ].join(" ")
 );
 </script>

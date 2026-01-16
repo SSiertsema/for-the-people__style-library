@@ -30,6 +30,11 @@ export function resolveReferences(
  * Resolve a single value string, replacing references
  */
 function resolveValue(value: string, allTokens: TokenGroup): string {
+  // Handle non-string values (convert to string)
+  if (typeof value !== 'string') {
+    return String(value);
+  }
+
   // Match {token.path} references
   const refPattern = /\{([^}]+)\}/g;
 
