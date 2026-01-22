@@ -67,6 +67,7 @@ const menuRef = ref(null);
 const isVisible = ref(false);
 const triggerElement = ref(null);
 const position = ref({ top: 0, left: 0 });
+const initialScrollY = ref(0);
 
 const additionalClasses = computed(() =>
   [props.popup && "menu--popup", isVisible.value && "menu--visible"]
@@ -106,6 +107,7 @@ const show = (event) => {
   if (!props.popup) return;
 
   triggerElement.value = event.currentTarget || event.target;
+  initialScrollY.value = window.scrollY;
   calculatePosition(event);
   isVisible.value = true;
   emit("show");
@@ -113,6 +115,7 @@ const show = (event) => {
   nextTick(() => {
     document.addEventListener("click", onDocumentClick);
     document.addEventListener("keydown", onDocumentKeydown);
+    window.addEventListener("scroll", onWindowScroll, true);
   });
 };
 
@@ -124,6 +127,7 @@ const hide = () => {
 
   document.removeEventListener("click", onDocumentClick);
   document.removeEventListener("keydown", onDocumentKeydown);
+  window.removeEventListener("scroll", onWindowScroll, true);
 };
 
 const toggle = (event) => {
@@ -135,36 +139,58 @@ const toggle = (event) => {
 };
 
 const calculatePosition = (event) => {
-  const rect = event.currentTarget?.getBoundingClientRect() || {
+  const triggerRect = event.currentTarget?.getBoundingClientRect() || {
+    top: event.clientY,
     bottom: event.clientY,
     left: event.clientX,
+    right: event.clientX,
   };
 
-  let top = rect.bottom + window.scrollY + 4;
-  let left = rect.left + window.scrollX;
+  const padding = 8;
+  const gap = 4;
 
-  // Adjust if menu goes off-screen (will be refined after menu renders)
-  nextTick(() => {
-    if (menuRef.value) {
-      const menuRect = menuRef.value.getBoundingClientRect();
-      const viewportWidth = window.innerWidth;
-      const viewportHeight = window.innerHeight;
-
-      // Adjust horizontal position
-      if (left + menuRect.width > viewportWidth) {
-        left = viewportWidth - menuRect.width - 8;
-      }
-
-      // Adjust vertical position
-      if (top + menuRect.height > viewportHeight + window.scrollY) {
-        top = rect.top + window.scrollY - menuRect.height - 4;
-      }
-
-      position.value = { top, left };
-    }
-  });
+  // Initial position: below trigger, left-aligned
+  let top = triggerRect.bottom + gap;
+  let left = triggerRect.left;
 
   position.value = { top, left };
+
+  // Refine position after menu renders
+  nextTick(() => {
+    if (!menuRef.value) return;
+
+    const menuRect = menuRef.value.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    // Vertical positioning: prefer below, fall back to above
+    const spaceBelow = viewportHeight - triggerRect.bottom - padding;
+    const spaceAbove = triggerRect.top - padding;
+
+    if (menuRect.height <= spaceBelow) {
+      top = triggerRect.bottom + gap;
+    } else if (menuRect.height <= spaceAbove) {
+      top = triggerRect.top - menuRect.height - gap;
+    } else {
+      // Clamp to viewport
+      top = Math.max(padding, Math.min(triggerRect.bottom + gap, viewportHeight - menuRect.height - padding));
+    }
+
+    // Horizontal positioning: prefer left-aligned, fall back to right-aligned
+    const spaceRight = viewportWidth - triggerRect.left - padding;
+    const spaceLeft = triggerRect.right - padding;
+
+    if (menuRect.width <= spaceRight) {
+      left = triggerRect.left;
+    } else if (menuRect.width <= spaceLeft) {
+      left = triggerRect.right - menuRect.width;
+    } else {
+      // Clamp to viewport
+      left = Math.max(padding, Math.min(triggerRect.left, viewportWidth - menuRect.width - padding));
+    }
+
+    position.value = { top, left };
+  });
 };
 
 const onDocumentClick = (event) => {
@@ -184,9 +210,16 @@ const onDocumentKeydown = (event) => {
   }
 };
 
+const onWindowScroll = () => {
+  if (Math.abs(window.scrollY - initialScrollY.value) > 15) {
+    hide();
+  }
+};
+
 onBeforeUnmount(() => {
   document.removeEventListener("click", onDocumentClick);
   document.removeEventListener("keydown", onDocumentKeydown);
+  window.removeEventListener("scroll", onWindowScroll, true);
 });
 
 defineExpose({
